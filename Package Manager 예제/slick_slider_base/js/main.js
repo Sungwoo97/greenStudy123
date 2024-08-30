@@ -47,7 +47,6 @@ $(function(){
     },
     onSlideAfter:function($slideElement){
       $('.option .slide').removeClass('active');
-      console.log($slideElement);
       $slideElement.addClass('active');
     }
   });
@@ -69,7 +68,24 @@ $(function(){
   
 
 	/* ---------- 동영상 제어하기 ---------- */
+    $('.video .slider').bxSlider({
+      pager:false,
+      onSlideAfter:function($slideElement){
+        $('.video .slide').each(function(){
+          if($(this).find('video').length > 0){
+            $(this).find('video').get(0).pause();
+            $(this).find('video').get(0).currentTime = 0;
+          }
+        });
+        if($slideElement.find('video').length > 0 ){
+          $slideElement.find('video').get(0).play();
+        }
+      }
+    }
+    
+  );
+  $( ".tabsslider" ).bxSlider();
 
-	
-	
+  $( "#tabs" ).tabs();
+
 });//document ready jquery 

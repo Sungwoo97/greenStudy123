@@ -6,6 +6,7 @@
 	<title>Bx slider</title>
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css"> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
 	<link rel="stylesheet" href="css/main.css"/>
 	<script src="js/main.js"></script>
@@ -121,11 +122,56 @@
 	<hr/>
 	
 	<h2>동영상 슬라이드 </h2>
-	
+  <div class="slideshow video">
+    <div class="slider">
+      <div class="slide">
+        <img src="images/img-1.jpg" alt="">
+      </div>
+      <div class="slide">
+        <video src="video/vivaldi.mp4" alt="" loop> 
+      </div>
+      <div class="slide">
+        <video src="video/vivaldi.mp4" alt="" loop>
+      </div>
+      <div class="slide">
+        <img src="images/img-4.jpg" alt="">
+      </div>
+    </div>
+  </div>
 	<hr/>
 	
 	<h2>탭 + 슬라이드 연동 </h2>
-	
+    <div id="tabs">
+      <ul>
+        <li><a href="#tabs-1">Nunc tincidunt</a></li>
+        <li><a href="#tabs-2">Proin dolor</a></li>
+        <li><a href="#tabs-3">Aenean lacinia</a></li>
+      </ul>
+      <div id="tabs-1">
+        <div class="tabsslider">
+          <img src="images/img-1.jpg" alt="">
+          <img src="images/img-2.jpg" alt="">
+          <img src="images/img-3.jpg" alt="">
+          <img src="images/img-4.jpg" alt="">
+        </div>
+      </div>
+      <div id="tabs-2">
+        <div class="tabsslider">
+          <img src="images/img-1.jpg" alt="">
+          <img src="images/img-2.jpg" alt="">
+          <img src="images/img-3.jpg" alt="">
+          <img src="images/img-4.jpg" alt="">
+        </div>
+      </div>
+      <div id="tabs-3">
+        <div class="tabsslider">
+          <img src="images/img-1.jpg" alt="">
+          <img src="images/img-2.jpg" alt="">
+          <img src="images/img-3.jpg" alt="">
+          <img src="images/img-4.jpg" alt="">
+        </div>
+      </div>
+    </div>
 	<hr/>		
 	
 </body>
