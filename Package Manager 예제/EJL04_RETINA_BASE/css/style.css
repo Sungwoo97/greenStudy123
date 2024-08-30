@@ -1,0 +1,13 @@
+ .demo-container{
+  width: 500px;
+  height: 333px;
+  background-image: url('../images/image.jpg');
+} 
+/*
+ @media screen and (-webkit-min-device-pixel-ratio:2) 
+ @media (min-resolution: 2dppx){
+  .demo-container{
+    background-image: url('../images/image@2x.jpg');
+    
+  }
+} */

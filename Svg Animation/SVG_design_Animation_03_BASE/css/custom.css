@@ -1,0 +1,80 @@
+h1, h2, h3, p {
+	font-family:'Source Sans Pro';
+	font-weight: 300;
+}
+.clearfix { clear:both; }
+p {
+	font-size:1.2em;
+}
+
+h1, h2, h3 {
+	font-size:3em;
+}
+
+#blue-container {
+	background:#000 url(../images/bg.png) repeat-x;
+	padding: 120px 0;
+}
+
+#gray-container {
+	background:#fff url(../images/bg2.png);
+	padding: 120px 0;
+	margin-top:310px;
+}
+
+
+.alc {
+	text-align:center;
+}
+
+h1 {
+	color:#fff;
+}
+
+
+.st0{fill:#E6E7E8;}
+.st1{fill:#231F20;}
+.st2{fill:none;stroke:#FFFFFF;stroke-width:4;stroke-miterlimit:10;}
+.st3{fill:none;stroke:#BCBEC0;stroke-width:4;stroke-miterlimit:10;}
+.st4{fill:#231F20;stroke:#000000;stroke-width:9;stroke-miterlimit:10;}	
+#smallpad .st0{fill:#E8E6CF;stroke:#231F20;stroke-width:9;stroke-miterlimit:10;}
+
+.notepads svg{
+  opacity: 0;
+  transition: .5s ease-out;
+}
+
+#bigpad{
+  transform: translate(-200px);
+}
+
+#smallpad{
+  margin-left: -50px;
+  transform: translate(200px);
+}
+.notepads.active svg{
+  opacity: 1;
+  
+}
+.notepads.active #smallpad,
+.notepads.active #bigpad{
+  transform: none;
+}
+.active #lines line{
+  stroke-dasharray: 96;
+  stroke-dashoffset: 96;
+  animation : linedash .5s .2s  linear forwards;
+}
+.active #lines #line2 { animation-delay: .3s;}
+.active #lines #line3 { animation-delay: .4s;}
+.active #lines #line4 { animation-delay: .5s;}
+.active #lines #line5 { animation-delay: .8s;}
+
+@keyframes linedash{
+  from{
+    stroke-dashoffset: 96;
+  }
+  to{
+    stroke-dashoffset: 0;
+  }
+}

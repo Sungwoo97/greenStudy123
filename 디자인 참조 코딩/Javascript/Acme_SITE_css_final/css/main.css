@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+.banner .section-tt{
+  color: var(--white);
+}
+
+.banner img{
+  display: block;
+  margin:0 auto;
+}
+.feature ul{
+  display: flex;
+  gap:24px;
+}
+.feature li{
+  text-align: center;
+}
+.feature li:last-child{
+  margin-right:0;
+}
+.feature li span{
+  display: inline-block;
+  width: 108px;
+  height: 108px;
+  border:1px solid var(--sky-blue);
+  border-radius:50%;
+  box-sizing: border-box;
+  line-height:106px;
+  font-size: 32px;
+  color: var(--sky-blue);
+  margin-bottom: var(--line-base);
+}
+.feature li h3{
+  margin-bottom: var(--line-base);
+}

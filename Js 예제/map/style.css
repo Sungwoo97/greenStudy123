@@ -1,0 +1,21 @@
+.tab-wrapper { width:960px; margin:auto;}
+.tab-menu {padding-left:0; position: relative; z-index:1; display:flex; gap:20px;}
+.tab-menu li {list-style:none; }
+.tab-menu li a{ color:#999; text-transform:uppercase; font-weight:bold;line-height:27px; text-decoration:none; padding:0 20px; display: block;}
+#tab-content {min-height: 300px; position: relative; }
+
+.tab-menu li a.active{
+	color: #fff;
+	background: #000;
+}
+
+.map{
+  height: 350px;
+}
+
+#tab-content > div{
+	display: none;
+}
+#tab-content > div.active{
+	display: block;
+}

@@ -1,0 +1,53 @@
+*{
+  margin:0;
+  padding: 0;  
+}
+.slidewrapper{
+  width: 1000px;
+  margin:3em auto;
+  background: #ccc;
+  height: 400px;
+  position: relative;
+  overflow:hidden;
+}
+.slidecontainer{
+  position: relative;
+  display: flex;
+  left:0;
+  top: 0;
+  height: 400px;  /* 높이가 없어서 error */
+}
+.slidecontainer.animated{
+  transition:left 0.3s;
+}
+.slide {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;  
+  background: #ebebeb;
+  text-transform: uppercase;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.pager{
+  position: absolute;
+  left: 0; 
+  right: 0;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.pager a{
+  width: 20px;
+  height: 20px;
+  background: #ccc;
+  text-indent: -9999em;
+}
+.pager a.active{
+  background: #000;
+}

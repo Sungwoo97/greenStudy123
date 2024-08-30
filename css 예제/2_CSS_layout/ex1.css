@@ -1,0 +1,48 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-size: 20px;
+  width: 960px;
+  margin: 0 auto;
+  
+}
+header > *, main > *, footer {
+  padding: 10px;
+  background: #ebebeb;
+  margin : 20px 0px;
+  
+}
+header, main {
+  margin-bottom: 40px;
+}
+header .log, header nav {
+  margin-bottom: 20px;
+}
+
+main aside{
+  float: left;
+  width: 300px;
+  box-sizing: border-box;
+}
+main .content{
+  float:right;
+  width: 620px;
+  box-sizing: border-box;
+}
+.cf:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.portfolio div{
+  width: 280px;
+  float:left;
+}
+.portfolio div + div{
+  margin-left: 60px;
+}
+
+
+

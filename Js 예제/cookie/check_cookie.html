@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>쿠키확인</title>
+  <script>
+   
+    /* 
+    쿠키확인
+    document.cookie
+    */
+    console.log(document.cookie);
+    console.log(document.cookie.indexOf('ABC=재방문'));
+    console.log(document.cookie.search('ABC=재방문'));  // -1보다 크면 재방문
+    let cookie = document.cookie.replace(' ','');
+    let cookies = cookie.split(';');
+    console.log(cookies);
+    let result = cookies.find(item=>item === 'ABC=재방문'); // result 값이 있다면 재방문
+    console.log(result);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

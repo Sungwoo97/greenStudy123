@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gradient</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            border: 1px solid;
+            margin: 2rem auto;
+        } /* background: 종류(Lenear, radial) (방향, 색상 위치 색상 위치); */
+          /* 방향 값 : to bottomm to top 45deg */
+        .linear{
+          background: linear-gradient(to bottom, #2989cc 0%, #ffffff 50% , #906a00 52%, #d99f00 64% , #ffffff 100% );
+        }
+        .linear2{
+          /* background: linear-gradient(to bottom, #2989cc 0%, #2989cc 20%,#ffffff 20% , #fff 80%, #2989cc 80% , #2989cc 100% ); */
+          /* background: linear-gradient( #2989cc 20%,#ffffff 20% , #fff 80%, #2989cc 80%  ); */
+          /* background: linear-gradient( #2989cc ,#ffffff, #2989cc); */
+          background: repeating-linear-gradient( #2989cc 50px ,#ffffff 50px, #2989cc 100px);
+        }
+        .radial{
+          /* background: radial-gradient(모양, 중심점 좌표, 색상 위치, 색상 위치); */
+          height: 200px;
+          background: radial-gradient(circle , #000 0%, #fff 100% );
+        }
+        </style>
+</head>
+
+<body>
+    <h1>Gradient</h1>
+    <div class="box linear">linear gradient</div>
+    <div class="box linear2">linear gradient</div>
+    <div class="box radial">Radial gradient</div>
+</body>
+
+</html>

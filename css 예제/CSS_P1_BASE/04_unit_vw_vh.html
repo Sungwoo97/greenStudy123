@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>viewport unit</title>
+    <style>
+      /* html{
+        height: 100%;
+      }
+      body{
+        height: 100%;
+      } */
+      .child{
+        width: 100%;
+        background-color: green;
+      }
+      .child2{
+        width: 100vw;
+        background-color: green;
+      } 
+      .parent{
+        background-color: #ccc;
+        height: 100vh;
+      }
+      h1{
+        font-size: 10vw;
+      }/*반응형 디자인*/
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Logo</h1>
+    </header>
+    <hr>
+    <div class="parent">
+        <div class="child">Percent</div>
+        <div class="child2">vw</div>
+    </div>
+    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore consequatur, adipisci amet est ex voluptate dolorem, fugiat perspiciatis expedita voluptatibus esse deserunt sapiente hic. Voluptatem nostrum ea itaque eos libero?</p> -->
+</body>
+
+</html>

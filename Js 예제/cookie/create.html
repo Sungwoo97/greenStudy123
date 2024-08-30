@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>쿠키생성</title>
+  <script>
+    let date = new Date();
+    date.setDate(date.getDate() + 7);
+    console.log(date);
+    /* 
+    쿠키생성
+    document.cookie = 새값; // 새 값은 문자열
+    만기일자는 반드시 문자열로 변환
+    date.toUTCString()
+    */
+    let myCookie = 'ABC=재방문;expires='+date.toUTCString();
+    document.cookie = myCookie;
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

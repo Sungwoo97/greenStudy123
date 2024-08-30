@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="robots" content="index, follow">
+    <title>오디오 비디오 구현</title>
+</head>
+
+<body> 
+    <h1>img</h1>
+    <figure>
+        <img src="images/vivaldi.jpg"  alt="vivaldi">
+        <figcaption>vivaldi summer</figcaption>
+    </figure>
+    <hr>
+        <h2>video</h2>
+        <video src="video/vivaldi.mp4" muted controls loop autoplay preload="auto" poster="images/vivaldi.jpg"></video>
+        <hr>
+        <video controls>
+            <source src="video/vivaldi.mp4" type=" video/mp4">
+            <source src="video/vivaldi.mp4" type=" video/webm">
+            <source src="video/vivaldi.mp4" type=" video/ogv">
+           
+            
+            <p>귀하의 브라우저는 mp4를 지원하지 않습니다.</p> <!-- fallback contents-->
+        </video>
+        <h2>cloudinary</h2>
+        <video src="https://res.cloudinary.com/drqr1d0gn/video/upload/v1720401161/vivaldi_whauso.mp4" controls></video>
+        <h2>youtube</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/zzE-kVadtNw?si=EAEcCqUCwfa9fQeF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h2>vimeo</h2>
+        <iframe src="https://player.vimeo.com/video/440193219?h=cb45d17538&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        <hr>
+        <iframe src="https://daum.net" width="560" height="315" frameborder="0"></iframe>
+        <h2>Audio</h2>
+        <audio src="audio/Honey_Bee_01_web.mp3" controls></audio>
+        <audio controls>
+          <source src="audio/Honey_Bee_01_web.mp3" type="audio/mp3"> 
+          <source src="audio/Honey_Bee_01_web.mp3" type="audio/wav"> 
+          <source src="audio/Honey_Bee_01_web.mp3" type="audio/ogg">
+          <p>audio를 지원하지 않습니다.</p> 
+        </audio>
+</body>
+
+</html>

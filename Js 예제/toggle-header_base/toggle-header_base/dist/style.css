@@ -1,0 +1,96 @@
+/* RESET RULES & HELPER CLASSES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+  --white: #fff;
+  --black: #221f1f;
+  --lightpurple: #9e91f2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  position: relative;
+  font: 16px/1.5 sans-serif;
+  color: var(--white);
+}
+.page-main section{
+  height: 100vh;
+  background: no-repeat center / cover;
+}
+.page-header{
+  position: fixed;
+  left: 0; 
+  right: 0;
+  top: 0; 
+  background: var(--lightpurple);
+  transition: transform .5s;
+}
+.scroll-down .page-header{
+  transform: translateY(-100%);
+}
+.scroll-up .page-header{
+  transform: none;
+}
+.trigger-menu-wrapper{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,.3);
+}
+.page-header .menu{
+  position: fixed;
+  left: 0; 
+  right: 0;
+  top: 0; 
+  bottom: 0;
+  background: var(--lightpurple);
+  z-index: -1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  display: none;
+}
+.menu > li > a{
+  font-size: 3em;
+}
+.sub-menu{
+  font-size: 1.5em;
+}
+.trigger-menu{
+  color: var(--white);
+  font-size: 1.5em;
+}
+.trigger-menu svg{
+  fill: var(--white);
+  transition: transform .3s;
+}
+.menu-opened .trigger-menu svg{
+  transform: rotate(45deg);
+}
+.menu-opened .page-header .menu{
+  display: flex;
+}
+.menu-opened {
+  overflow: hidden;
+}

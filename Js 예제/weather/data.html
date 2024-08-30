@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>초단기실황조회</h1>
+  <h2>발표일자 : <span id="date"></span></h2>
+  <h2>발표시각 : <span id="time"></span></h2>
+  <h2>온도 : <span id="temp"></span></h2>
+  <h2>습도 : <span id="humidity"></span></h2>
+  <script>
+    let today = document.querySelector('#date');
+    let time = document.querySelector('#time');
+    let temp = document.querySelector('#temp');
+    let humidity = document.querySelector('#humidity');
+
+    
+    let queryDate = new Date();
+    let year = queryDate.getFullYear();
+    let month = String(queryDate.getMonth() + 1).padStart(2,'0');
+    let day = String(queryDate.getDate()).padStart(2,'0');
+    
+    let resultDate = `${year}${month}${day}`;
+
+    console.log(resultDate);
+    fetch(`https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst?serviceKey=jTQEdaAGysNAd0Yt5IauyO%2BVLmyfRGQKcPhnH%2BYxydyiVXCEcJg1RpDcrb2AyNx4y6UvlyfLXlGdDfiK7LHyzQ%3D%3D&pageNo=1&numOfRows=1000&dataType=JSON&base_date=${resultDate}&base_time=0600&nx=60&ny=127`)
+	    .then(response=> 
+        response.json()  //객체로 변환
+      ) 
+      .then(data=>{ 
+        //data로 할일
+        let result = data.response.body.items.item;
+        console.log(result);
+        today.innerText = result[0].baseDate;
+        time.innerText = result[0].baseTime;
+        temp.innerText = result.find(item=>item.category == 'T1H').obsrValue;
+        humidity.innerText = result.find(item=>item.category == 'REH').obsrValue;
+      }); 
+
+  </script>
+</body>
+</html>

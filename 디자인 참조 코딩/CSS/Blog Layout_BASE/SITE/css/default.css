@@ -1,0 +1,142 @@
+@charset "utf-8";
+@import url('normalize.css');
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Bentham&family=Libre+Baskerville:ital@1&family=PT+Serif:ital@0;1&display=swap');
+
+/* TTPOGRAPHY */
+body{
+  font-family: "PT Serif", serif;
+  color: #444;
+}
+/* LAYOUT */
+.container{
+  width: 640px;
+  margin: 0 auto;
+}
+/* HEADER */
+header{
+  height: 600px;
+  /* 배경 지정, 반복, 너비 맞춰 늘어나고, 가운데 상단 */
+  background: url('../images/header_bg.jpg') no-repeat 50% 0/cover;
+  position: relative;
+  text-align: center;
+  padding-top: 60px;
+  box-sizing: border-box;
+}
+header:after{
+  content:'';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.5);
+  z-index: 0;
+  backdrop-filter: blur(2px);
+}
+header > *{
+  position: relative;
+  color: #fff;
+  z-index: 1;
+}
+header h1{
+  border: solid 1px white;
+  display: inline-block;
+  line-height: 51px;
+  text-transform: uppercase;
+  /* padding: 15.5px 20px; */
+  /* margin-top: 60px; */
+  padding: 0 21px;
+  letter-spacing:0.12em;
+  font-size: 30px;
+  margin-bottom: 122px;
+}
+header h2{
+  font-family: "Bentham", serif;
+  font-size: 60px;
+  line-height: 72px;
+  width: 660px;
+  margin: 0 auto 23px;
+
+}
+header h2 span{
+  font-family: "Libre Baskerville", serif;
+  font-style: italic;
+}
+header p {
+  font-size: 20px;
+  font-style: italic;
+}
+
+/* MAIN */
+main{
+  padding:  100px 0 110px;
+  
+}
+main h2{
+  font-family: "Bentham", serif;
+  width: 640px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing:0.08em;
+  font-size: 42px;
+  line-height: 50px;
+  margin-bottom: 30px;
+}
+main h3{
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 53px;
+}
+main p {
+  line-height: 34px;
+  font-size: 18px;
+  margin-bottom: 34px;
+  color: #6f6f6f;
+}
+main p em{
+  color: #e3514e;
+}
+main ul {
+  margin-top: 50px;
+  border: solid 1px #6f6f6f;
+}
+ul li{
+  float:left;
+  width:25%;
+  text-align: center;
+  border-right: solid 1px #6f6f6f;
+  box-sizing: border-box;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  line-height: 52px;
+  text-transform: uppercase;
+}
+main ul li a{
+  display: block;
+  color: #000;
+}
+main ul li:last-child{
+  border-right: none;
+}
+
+ul:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+main ul li a:hover{
+  background: #e3514e;
+  color: #fff;
+}
+/* FOOTER */
+
+footer{
+ height: 66px;
+ line-height: 66px;
+ background: #555;
+ text-align: center;
+ font-size: 14px;
+ color:#fff;
+}

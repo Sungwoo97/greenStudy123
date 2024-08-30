@@ -1,0 +1,39 @@
+.qna ul{
+  width: 750px;
+  margin:0 auto;
+}
+.qna ul li + li{
+  margin-top:1px;
+}
+.question{
+  background: var(--light-gray);
+  padding: 0 20px;
+  line-height: calc(var(--line-base) * 2);
+  position: relative;
+}
+.question span{
+  position: absolute;
+  right: 20px;
+  top: calc(50% - 12px);
+  opacity: 0.4;
+}
+.answer{
+  display: none;
+  padding: 20px 20px 32px;
+}
+.active .question{
+  font-weight: bold;
+}
+.active .question span{
+  opacity: 1;
+}
+.active .answer{
+  display: block;
+}
+.example_portfolio figcaption{
+  width: 656px;
+  margin:0 auto;
+}
+.example_portfolio figcaption p{
+  margin-bottom: var(--line-base);
+}

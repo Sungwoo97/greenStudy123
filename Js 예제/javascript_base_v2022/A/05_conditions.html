@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>conditions</title>
+</head>
+
+<body>
+    <h1>조건문</h1>
+    <pre>
+      if(조건){
+        //참일때 할일
+      }else{
+        //거짓일때 할 일
+      }
+    </pre>
+    <script>
+      let a = 10;
+      let b = 20;
+      let c = true;
+      let d = null;
+      let e;
+      let f = false;
+      if(a>b){
+        document.write('a가 b보다 크다');
+      }
+      if(!f){
+        console.log('참');
+      }else{
+        console.log('거짓');
+      }
+    </script>
+    <hr>
+    <script>
+
+    </script>
+    <hr>
+    <h2>비교연산자 != </h2>
+    <pre>
+      if(조건){
+        //참일때 할 일
+      }
+      else if (조건){
+        
+      }
+      else{
+        //거짓일때 할 일
+      }
+    </pre>
+    <script>
+      if(a>b){
+        document.write('a가 b보다 크다');
+      }else if(a == b){
+        document.write('a가 b와 같다');
+      }
+      else {
+        document.write('a가 b보다 작다');
+      }
+    </script>
+    <hr>
+    <script>
+      if(a>b){
+        document.write('a가 b보다 크다');
+      } else if(a != b){
+        document.write('a가 b와 같지 않다');
+      } else {
+        document.write('a가 b보다 작다');
+      }
+    </script>
+   
+    <h2>타입 비교</h2>
+    <pre>
+      ==, != 단순히 값만 비교연산자
+      ===, !== 값과 데이터의 타입까지 비교
+      데이터의 타입에는 number, string, object(array), null, undefined
+      typeof(대상) 대상의 타입을 반환
+    </pre>
+    <script>
+      let x = 10;
+      let y = '10';
+      let z = null;
+      let s ;
+      console.log(typeof(x),typeof(y));
+      console.log(typeof(z),typeof(s));
+      if(x === y){
+        document.write('두 값은 같다');
+      }else { 
+        document.write('두 값은 다르다');
+      }
+      if(z === s){
+        document.write('두 값은 같다');
+      }
+
+    </script>
+    <hr>
+    <h2>중첩 조건문</h2>
+    <pre>
+      if(조건1){
+      
+       if (조건2){
+        //조건 2가 참일때 할 일
+      }else{
+        //조건 2이 거짓일때 할 일
+        } 
+      }else {
+        //조건 1이 거짓일 때 할 일
+      }
+    </pre>
+    <script>
+      if(a != b){
+          if(a>b){
+            document.write('a가 b보다 크다');
+          }else{
+            document.write('a가 b보다 작다');
+          }
+        } else{
+          document.write('a가 b와 같다');
+        }
+    </script>
+    <hr>
+    <h2>조건문의 축약</h2>
+      <pre>
+        if(조건){
+          //참일때 할일
+        }else{
+          //거짓일때 할 일
+        }
+        축약 1 중괄호{} 제거
+        if(조건)
+          //참일때 할일
+        else
+          //거짓일때 할 일
+        축약2 삼항연산자
+        조건 ? 참:거짓;
+      </pre>
+    <script>
+      // if(a>b)
+      //   document.write('a가 b보다 크다');
+      // else
+      //   document.write('a가 b보다 작다');
+      
+      a>=b ? document.write('a가 b보다 크다'):document.write('a가 b보다 작다');
+    </script>
+    <hr>
+    <h2>논리연산자</h2>
+    <pre>
+      a && a : - > a, b 조건 모두 참이면 참이다
+      a || a : - > a, b 조건 둘 중 하나라도 참이면 참이다
+    </pre>
+    <script>
+      let aa= 10;
+      let bb= 20;
+      let cc= 30;
+      if(aa<bb && bb<cc){
+        document.write('참');
+      }
+      if(aa<bb || bb<cc){2
+        document.write('참');
+      }
+    </script>
+
+    <h2>switch</h2>
+    <pre>
+      switch(조건){
+        case 값1:
+          할일
+          break;
+        case 값2:22
+          할일
+          break;
+        default:
+          할일
+          break;
+      }
+    </pre>
+    <script>
+      let number = prompt('숫자를 입력해주세요', 0);
+      console.log(number);
+      switch(number % 2){
+        case 0:
+          alert('짝수');
+          break;
+        case 1:
+          alert('홀수');
+          break;
+        default:
+          alert('숫자를 입력하세요');
+          break;
+      }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+.logo a{
+  background-image: url('../images/logo.png');
+  background-repeat: no-repeat;
+  width: 75px;
+  height: 75px;
+  text-indent: -9999em;
+  display: block;
+}
+header{
+  background: #f6f5ef;
+  padding: 20px 0;
+}
+.container{
+  width: 1100px;
+  margin: 0 auto;
+}
+header h1{
+  float: left;
+}
+header nav{
+  float: right;
+}
+header nav li{
+  float: left;
+  list-style: none;
+}
+.top-menu{
+  margin-bottom: 20px;
+  float: right;
+}
+.top-menu li{
+  margin-left: 20px;
+}
+.main-menu{
+  clear: right;
+}
+.main-menu li{
+  margin-left: 30px;
+}
+.main-menu div{
+  display: none;
+}
+
+.cf:after{
+  display:block;
+  content:'';
+  clear:both;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Lesson  - Modernizr</title>
+  
+	<style>
+    img{
+      vertical-align: top;
+    }
+    .demo-image{
+      -webkit-box-reflect: below;
+    }
+    .box{
+      width: 30%;
+      background: green;
+      aspect-ratio: 1.5;
+    }
+    .demo-image2{
+      display: none;
+    }
+    .no-cssreflections .demo-image2{
+      display: block;
+      transform: rotateX(180deg);
+      position: absolute;
+    }
+	</style>
+<script src="modernizr-custom.js"></script>
+
+</head>
+<body>
+  <div class="box">box</div>
+	<!-- Demo content -->
+  <img src="images/demo-image.jpg" alt="" class="demo-image">
+  <img src="images/demo-image.jpg" alt="" class="demo-image2">
+  
+</body>
+</html>

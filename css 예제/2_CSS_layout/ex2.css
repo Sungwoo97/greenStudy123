@@ -1,0 +1,48 @@
+*{
+  margin: 0; 
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+.pager a{
+  width: 10px;
+  height: 10px;
+  background: #000;
+  display: inline-block;
+  text-indent: -9999em;
+  border-radius: 50%;
+
+}
+.wrapper{
+  width: 960px;
+  margin: 0 auto;
+  
+}
+.slidewrapper{
+  background: #ebebeb;
+  height: 500px;
+  position: relative;
+}
+.slidewrapper button{
+  position: absolute;
+  padding: 0 10px;
+  height: 40px;
+  background: #000;
+  color: white;
+  top:calc(50% - 20px);
+}
+#prev{
+     right:calc(100% - 61px);  
+} 
+#next{
+    left:calc(100% - 61px);  
+}
+.pager{
+  position: absolute;
+  left: 0;
+  right:0;
+  bottom:10px;
+  text-align: center;
+  word-spacing: 20px;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>String</title>
+</head>
+
+<body>
+    <h1>String</h1>
+    <pre>
+      "문자열"
+      '문자'
+    </pre>
+    <h2>chartAt</h2>
+    <pre>
+      what is character at index;
+    </pre>
+    <script>
+      let str = "hello world";
+      console.log(str.charAt(6));
+    </script>
+
+    <h2>IndexOf, Search</h2>
+    <pre>
+      대상.indexOf('찾을문자');
+      대상.search('찾을문자');
+      대상이 없다면 -1
+    </pre>
+    <script>
+      console.log(str.indexOf('llos'));
+      console.log(str.search('llo'));
+    </script>
+    <ul>
+      <li><a href="menu1.html">menu1</a></li>
+      <li><a href="menu2.html">menu2</a></li>
+      <li><a href="menu3.html">menu3</a></li>
+    </ul>
+    <h2>concat</h2>
+    <pre>
+      문자, 배열을 합치는 함수
+    </pre>
+    <script>
+      let str2 = 'javascript';
+      let str3 = 'basic';
+      let newstr = str2.concat(str3);
+      console.log(newstr);
+    </script>
+
+    <h2>replace</h2>
+    <pre>
+      a.replace('b','c');  //원본 수정, 새로운 문자열 생성
+      a에서 b를 c로 변경
+    </pre>
+    <script>
+      let newstr2 = str.replace('world','universe');
+      console.log(newstr2);
+    </script>
+
+    <h2>slice</h2>
+    <pre>
+      지정한 구간의 값을 복사
+      대상.slice(시작, 끝);
+    </pre>
+    <script>
+      let slidestr = str.slice(6, 11);
+      console.log(slidestr);
+    </script>
+
+    <h2>split</h2>
+    <pre>
+      join 배열 -> 문자열 배열.join() a,b,c
+      join 배열 -> 문자열 배열.join(-) a-b-c
+      join <-> split
+
+      split 문자열 -> 배열로 변환
+      문자열.split();
+    </pre>
+    <script>
+      let langs = "a/b/c";
+      let langArr = langs.split('/');
+      console.log(langArr);
+    </script>
+
+    <h2>length</h2>
+    <pre>
+      문자열의 개수를 확인
+    </pre>
+    <script>
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>쿠키 - 팝업</title>
+  <style>
+    .popup{
+      position: fixed;
+      left: 100px; top: 100px;
+      background: #fff;
+      box-shadow: 3px 3px 10px rgba(0,0,0,.2);
+      border-radius: 10px;
+      padding: 5px 20px 10px;
+      display: none;
+    }
+    .popup.show{
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>ABC corp.</h1>
+  <div class="popup">
+    <h2>반갑습니다</h2>
+    <label for="check">오늘 하루 안보기</label>
+    <input type="checkbox" id="check">
+    <button>닫기</button>
+  </div>
+  <script src="cookie.js"></script>
+</body>
+</html>

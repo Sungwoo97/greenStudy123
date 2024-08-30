@@ -1,0 +1,266 @@
+@charset "utf-8";
+@import url('normalize.css');
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Plus&family=PT+Sans&display=swap');
+
+/* typography */
+body{
+  /*
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:16px;
+  line-height:24px;
+  */
+  font:16px/24px Arial, Helvetica, sans-serif;
+  color:#626262;
+  background:url('../images/body_bg.jpg');
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: "Gentium Plus", serif;
+}
+.sec-tt{
+  font-size:24px;
+  text-align: center;
+}
+.sec-tt:after{
+  content:'-';
+}
+.sec-tt:before{
+  content:'-';
+}
+/* layout */
+.container{
+  width: 1000px;
+  margin: 0 auto;
+}
+.m-2{
+  margin-top:48px;
+  margin-bottom:48px;
+}
+.p-2{
+  padding-top:48px;
+  padding-bottom:48px;
+}
+.mb-1{
+  margin-bottom: 24px;
+}
+.mb-2{
+  margin-bottom: 48px;
+}
+.blind {
+  position: absolute;
+  clip:rect(0 0 0 0);
+  clip-path:inset(0 0 100% 100%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+hr{
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  border:none;
+  /* border-top:1px solid #d1d6d4; */
+  height: 1px;
+  background: #d1d6d4;
+}
+input:focus,button:focus{
+  outline:none;
+}
+.cf:after{
+  content:'';
+  display:block;
+  clear:both;
+}
+.btn{
+  width: 48px;
+  height: 48px;
+  text-align:center;
+  line-height: 48px;
+  display: inline-block;
+  color: #fff;
+}
+.primary{
+  background: #f93f1c;
+}
+/* header */
+header {
+  text-align:center;
+  background-color:#fff;
+}
+header h1{
+  width: 72px;
+  height: 72px;
+  /* background:url(../images/Logo.svg) no-repeat; */
+
+  margin-left: auto;
+  margin-right: auto;
+}
+header h2{
+  width: 507px;
+  margin:0 auto;
+  font-size: 36px;
+  line-height: 48px;
+  color: #2f2f2f;
+}
+header p{
+  width: 598px;
+  margin:0 auto;
+  font:24px/34px "Gentium Plus", serif;
+}
+header p strong{
+  color:#f93f1c;
+}
+/* form */
+.form{
+  background:#2f2f2f url(../images/Decoration.svg) no-repeat center;
+}
+.form form{
+  width: 307px;
+  margin:0 auto;
+}
+.form form input{
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+  border:none;
+  line-height: 42px;
+  text-align:center;
+  /* box-shadow:x y blur color */   
+}
+.form form input::-webkit-placeholder{
+  color:#c3c3c3;
+}
+.form form input::placeholder{
+  color:#c3c3c3;
+}
+.form form div + div{
+  margin-top: 6px;
+}
+.form form input:focus{
+  box-shadow: inset 0 0 5px #f93f1c;
+}
+.form form p{
+  color: #c3c3c3;
+  font-size: 14px;
+  line-height: 24px;
+  margin:24px 0;
+  font-style:italic;
+  letter-spacing:-0.5px;
+  text-align:center;
+}
+.form button{
+  width: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  background: #f93f1c;
+  border:none;
+}
+/* progress */
+.progress-box{
+  background: rgba(181,184,163,.3);
+  padding: 15px;
+}
+.progress-bar{
+  background:rgba(127, 158, 63, .7);
+  width: 0;
+  height: 114px;
+  float:left;
+  margin-right: 30px;
+  position: relative;
+  text-indent: -9999em;
+  transition: 2.4s;
+}
+.progress-bar:after{
+  content:'';
+  width: 0;
+  height: 0;
+  border-style:solid;
+  border-width:11px;
+  border-color:transparent transparent transparent rgba(127, 158, 63, .7);
+  position: absolute;
+  left: 100%;
+  top: 12px;
+}
+.progress-box .content{
+  width: 282px;
+  float:left;
+}
+.progress-box .content h3{
+  font-weight: bold;
+}
+/* freebie */
+.freebie h2{
+  color: #fff;
+}
+.freebie {
+  background: #2f2f2f;
+  text-align:center;
+  color:#c3c3c3;
+}
+.freebie p{
+  width: 321px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.freebie p strong{
+  color: #f93f1c;
+}
+
+
+/* footer */
+footer{
+  text-align:center;
+}
+footer p:first-child{
+  width: 433px;
+  margin-left: auto;
+  margin-right: auto;
+  font: 24px/34px "Gentium Plus", serif;
+
+}
+footer p:first-child a{
+  color:#f93f1c;
+}
+footer .sns{
+  word-spacing: 7px;
+  margin-bottom: 96px;
+}
+.back-to-top{
+  background: rgba(0,0,0,.2);
+  position: fixed;
+  /*
+  right: 50%;
+  margin-right: -548px;
+  */
+  right: calc(50% - 548px);
+  bottom: 170px;
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s;
+}
+.back-to-top.active{
+  opacity: 1;
+  visibility: visible;
+}
+
+.box{
+  width: 50px;
+  height: 50px;
+  /* border:10px solid #000; */
+  border-width:10px;
+  border-style:solid;
+  border-color:#00f #f00;
+  box-sizing: border-box;
+  margin:10px;
+}
+.box2{
+  border-width:25px;
+}
+.box3{
+  width: 0;
+  height: 0;
+  border-width:25px;
+  border-color:transparent transparent #f00 #f00;
+}

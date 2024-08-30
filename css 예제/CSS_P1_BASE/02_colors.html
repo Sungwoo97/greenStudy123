@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color</title>
+    <style>
+      h2{
+        color: blue;
+      }
+      h3{
+        background-color: #00f;
+        color: #fff;
+        /*background-color: #0000ff;
+        color: #ffffff;*/
+      }
+      h4{
+        background-color: rgb(0,0,255);
+        color: rgb(255,255,255);
+      } /* rgba = red, green, blue */
+      h5{
+        background-color: rgba(0,0,255,.5);
+        color: rgba(255,255,255,1);
+      } /*rgba = red, green, blue, alpha(opacity) */
+      h6{ 
+        /* background-color: hsl(240, 100%, 30%);
+        color: #fff; */
+        background-color: hsla(240,100%,50%,5);
+        color: #fff; 
+
+      } /* h 각도 s 채도 b 명도 l 밝기 */
+      .box1{
+        background-color: rgba(0, 0, 255, .3);
+        color: #000;
+      }
+      .box2{
+        background-color: rgb(0, 0, 255);
+        color: #000;
+        opacity: .3;
+       } /* 주의) 글씨에도 opacity 값이 적용됨 */
+    </style>
+  </head>
+
+  <body>
+    <h1>color</h1>
+    <h2>color name</h2>
+    <h3>hex code</h3>
+    <h4>rgb color</h4>
+    <h5>rgba color</h5>
+    <h6>hls color</h6>
+    <hr>
+    <div class="box1">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ipsa nisi omnis modi, rem corporis beatae hic quo aspernatur facilis ea mollitia vitae nesciunt, quisquam assumenda corrupti, architecto laudantium quod.</p>
+    </div>
+    <div class="box2">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ipsa nisi omnis modi, rem corporis beatae hic quo aspernatur facilis ea mollitia vitae nesciunt, quisquam assumenda corrupti, architecto laudantium quod.</p>
+    </div>
+  </body>
+
+</html>

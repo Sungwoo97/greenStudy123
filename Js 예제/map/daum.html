@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daum Map</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>Duam Map</h1>
+  <h2>Basic Map</h2>
+  <!-- 지도를 표시할 div 입니다 -->
+  <div id="map" class="map"></div>
+
+ 
+  <h2>Advanced Map</h2>
+  <div class="tab-wrapper">
+    <div class="nav">
+      <ul class="tab-menu">
+        <li><a href="#tabs-1" class="active" data-lat="37.4966645" data-lng="127.0629804">강남구청</a></li>
+        <li><a href="#tabs-2" data-lat="37.566242" data-lng="126.9019425">종로구청</a></li>
+        <li><a href="#tabs-3" data-lat="37.5734684" data-lng="126.978984">마포구청</a></li>	
+      </ul>
+      <span class="highlight"></span>
+    </div>
+  <div id="tab-content">
+    <div id="tabs-1" class="active map">
+     test
+    </div>
+    <div id="tabs-2" class="map">
+     
+    </div>
+    <div id="tabs-3" class="map">
+     
+    </div>
+  </div>
+  </div>
+
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2274627c4a494bf386cf63817403e8ce"></script>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

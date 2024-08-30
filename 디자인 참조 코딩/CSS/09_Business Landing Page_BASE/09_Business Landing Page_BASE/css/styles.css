@@ -1,0 +1,190 @@
+/* *********************************************************************************
+	Project Name: Business Landing Page	
+**********************************************************************************/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain) */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* 1. General Styles */
+
+body {
+  font: 14px/21px "Cabin", Helvetica, Arial, sans-serif;
+  color: #6c6c6c;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+p {
+  margin-bottom: 21px;
+}
+h1 {
+  font: 36px/1.5em "Cabin", Helvetica, Arial, sans-serif;
+}
+h2,
+h3 {
+  font: 21px/1.5em "Cabin", Helvetica, Arial, sans-serif;
+}
+h4 {
+  font: 16px/1.5em "Cabin", Helvetica, Arial, sans-serif;
+}
+h5 {
+  font: 14px/1.5em "Cabin", Helvetica, Arial, sans-serif;
+}
+h6 {
+  font: 12px/1.5em "Cabin", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #e74b34;
+  text-decoration: none;
+}
+a:hover {
+  color: #132c3b;
+}
+blockquote {
+  font: italic 21px/1.5em "Gentium Basic", Georgia, serif;
+  color: #2894d8;
+}
+blockquote cite {
+  display: block;
+  margin-top: 42px;
+  font-size: 16px;
+  font-style: normal;
+}
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ededed;
+  margin: 3em 0;
+}
+.link-go-top {
+  font: italic 14px "Gentium Basic", Georgia, serif;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>timer</title>
+</head>
+
+<body>
+    <h1>Timer</h1>
+    <h2>setTimeout</h2>
+    <pre>
+      set 설정
+      timeout 타이머, 한번 세팅
+
+      타이머를 설정하고, 그 시간이 다되면(timeout) 코드를 실행
+
+      setTimeout(할일, 시간);
+      할일 = function(){ 실제 할 일 }
+      시간 = ms단위 ex)3s = 3000ms
+      실제할일 alert('안녕');
+    </pre>
+    <script>
+      let mytimer =  setTimeout(function(){ alert('안녕'); }, 3000);
+ 
+    </script>
+    <pre>
+          타이머 종료
+          clearTimeout(대상타이머);
+        </pre>
+        <script>
+
+          clearTimeout(mytimer);
+        </script>
+    </body>
+    <h2>setInterval</h2>
+    <pre>
+      일정시간마다 할일
+      setInterval(할일, 시간);
+      할일 function(){ }
+      시간 3000
+
+    </pre>
+    <script>
+      let myInterval  = setInterval(function(){ alert('안녕')}, 3000);
+      
+    </script>
+    <pre>
+      clearinterval(대상);
+    </pre>
+    <script>
+      clearInterval(myInterval);
+    </script>
+</html>

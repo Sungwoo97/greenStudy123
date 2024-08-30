@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>날씨정보</title>
+  <style>
+    #icon{
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>날씨 정보</h1>
+  <h2>도시 이름을 영문으로 입력해주세요</h2>
+  <p>현재 위치는 <span id="location"> </span>입니다</p>
+  <form action="" id="search">
+    <input type="text" name="keyword">
+    <button>조회</button>
+  </form>
+  <hr>
+  <h3 >조회시간: <span id="time"></span></h3>
+  <h3 >현재 온도: <span id="ctemp"></span></h3>
+  <h3 >체감 온도: <span id="ftemp"></span></h3>
+  <h3 >습도: <span id="humidity"></span></h3>
+  <img src="" alt="cloud" id="icon">
+  <script src="openweather.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>테이블</title>
+  <style>
+    .col1 {
+      width: 10%;
+    }
+    .col2 {
+      width:70%;
+    }
+  </style>
+</head>
+<body>
+  <h1>테이블</h1>
+  <table> 
+    <caption>
+      <h2>테이블 제목</h2>
+      <p>테이블의 설명...</p>
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">구분</th>
+        <th scope="col">title 1</th>
+        <th scope="col">title 2</th>
+        <th scope="col">title 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>data 11</td>
+        <td>data 12</td>
+        <td>data 13</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>data 21</td>
+        <td>data 22</td>
+        <td>data 23</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>data 31</td>
+        <td>data 32</td>
+        <td>data 33</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <t>
+        <th scope="row">total</th>
+        <td>total 1</td>
+        <td>total 2</td>
+        <td>total 3</td>
+      </t> 
+    </tfoot>
+  </table>
+  <hr>
+  <table border="1"> 
+    <caption>
+      <h2>테이블 제목</h2>
+      <p>테이블의 설명...</p>
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">구분</th>
+        <th scope="col">title 1</th>
+        <th scope="col">title 2</th>
+        <th scope="col">title 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>data 11</td>
+        <td colspan="2">data 12</td>
+        <!-- <td>data 13</td> -->
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td rowspan="2">data 21</td>
+        <td>data 22</td>
+        <td rowspan="2">data 23</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <!-- <td>data 31</td> -->
+        <td>data 32</td>
+        <!-- <td>data 33</td> -->
+      </tr>
+    </tbody>
+    <tfoot>
+      <t>
+        <th scope="row">total</th>
+        <td colspan="3">total 1</td>
+        <!-- <td>total 2</td> -->
+        <!-- <td>total 3</td> -->
+      </t> 
+    </tfoot>
+  </table>
+  <table> 
+    <colgroup>
+      <col class="col1">
+      <col class="col2">
+      <col class="col1">
+      <col class="col1">
+    </colgroup>
+    <caption>
+      <h2>테이블 제목</h2>
+      <p>테이블의 설명...</p>
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">구분</th>
+        <th scope="col">title 1</th>
+        <th scope="col">title 2</th>
+        <th scope="col">title 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>data 11</td>
+        <td>data 12</td>
+        <td>data 13</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>data 21</td>
+        <td>data 22</td>
+        <td>data 23</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>data 31</td>
+        <td>data 32</td>
+        <td>data 33</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <t>
+        <th scope="row">total</th>
+        <td>total 1</td>
+        <td>total 2</td>
+        <td>total 3</td>
+      </t> 
+    </tfoot>
+  </table>
+</body>
+</html>

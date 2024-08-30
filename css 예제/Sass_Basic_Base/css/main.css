@@ -1,0 +1,23 @@
+body {
+  color: #444444;
+}
+
+#header > h1 {
+  background: DarkGray;
+  box-shadow: 0 0 1px rgba(169, 169, 169, 0.25);
+  color: #fff;
+}
+
+header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+header nav li {
+  display: inline-block;
+}
+header nav li a {
+  color: #00f;
+}
+
+/*# sourceMappingURL=main.css.map */

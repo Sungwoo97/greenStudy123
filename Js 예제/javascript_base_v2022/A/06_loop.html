@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Loop</title>
+</head>
+
+
+    <h1>Loop</h1>
+    <script>
+      let i= 0;
+      // i = i + 2;
+      i += 2;
+      document.write(i);
+    </script>
+    <hr>
+    <h2>for 반복문</h2>
+    <pre>
+      for(초기값; 조건; 증감){
+        //반복할 일
+      }
+
+    </pre>
+    <script>
+      for(i=0; i<=10; i+=2){
+        document.write(i);
+      }
+    </script>
+    <hr>
+    <script>
+      for(let i=10; i>=1; i--){
+        document.write(i);
+      }
+    </script>
+    <hr>
+    <script>
+      for(let n = 1; n <= 9; n++){
+        document.write('2 x '+n+'='+n*2+'<br>');
+      }
+    </script>
+    <h2>while 반복문</h2>
+    <pre>
+      초기값;
+      while (조건){
+        반복할 일;
+        증감;
+      }
+    </pre>
+    <script>
+      let x = 0;
+      while (x <= 10){
+        document.write(x);
+        x+=2;
+      }
+   </script>
+    <h2>do while 반복문</h2>
+    <pre>
+      초기값;
+      do{
+        반복할일;
+        증감;       // 무조건 한번은 실행됨
+      }while(조건);
+    </pre>
+    <script>
+      let y = 0;
+      do{
+        document.write(y);
+        y += 2;
+      }while(y <= 10);
+    </script>
+    <h2>forEach 반복문</h2>
+    <pre>
+      배열의 값들 가지고 반복문
+      대상은 반드시 배열
+      대상, 배열의 각 원소들마다 할 일
+      할일 = function(){  }
+      대상.forEach(function(각 원소, 인덱스, 전체요소)){ 각 원소들마다 할 일; }
+      대상.forEach(function(item, idx, all)){ 각 원소들마다 할 일; }
+    </pre>
+    <script>
+      let arr = ['가','나','다','라','마'];
+      arr.forEach(function(item,idx,all){   //순회한다
+        document.write(item+'는 배열 '+all+' 중 '+idx+'번째 값입니다.<br>');
+        console.log(item,idx,all);
+      })
+      
+    </script>
+    <h2>for in 반복문</h2>
+    <pre>
+      대상은 객체
+      객체 = 변수 + 함수;
+
+      for(원소 in 대상){
+        반복할일;
+      }
+    </pre>
+    <script>
+      let st1 = { kor:80, eng:70, math:100 }
+      
+      for(item in st1){
+        console.log(item);
+        document.write(item+' 점수 : '+st1[item]+'<br>');
+      }
+      console.log(st1.kor);
+    </script>
+    <h2>for of 반복문</h2>
+    <pre>
+      배열의 값들 가지고 반복문
+      대상은 반드시 배열
+      for(원소 of 대상){
+        //
+      }
+    </pre>
+    <ul class="list">
+
+    </ul>
+    <script>
+      let list = document.querySelector('.list');
+      let listHTML='';
+      //대상.innerHTML = 추가할 코드
+      // list.innerHTML= '<li>가</li>';
+      for(item of arr){
+        listHTML  += '<li>'+item+'</li>';
+        console.log(listHTML);
+        
+      }
+      list.innerHTML = listHTML;
+      for(item of arr){
+        document.write(item+'입니다<br>');
+      }
+
+    </script>
+    <h2>구구단</h2>
+    <script>
+      let s = 2;
+      for(s; s<10; s++){
+        document.write("-------------"+s+"단-------------<br>");
+        for(let o=1; o<10; o++){
+          let sum = s*o;
+          document.write(s+' x '+o+' = '+sum+"<br>");
+        }
+        document.write("<br>");
+      }
+    </script>
+</body>
+
+</html>

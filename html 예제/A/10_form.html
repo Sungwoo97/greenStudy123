@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼</title>
+</head>
+<body>
+  <h1>회원가입</h1>
+  <form action="#">
+    <fieldset>
+      <legend>필수 입력</legend>
+      <p><label for="username">이름 : </label><input type="text" id="username" name="username"  minlength="2" required placeholder="이름을 입력해주세요" autofocus></p>
+
+      <p><label for="useremail">Email : </label><input type="email" id="useremail" name="useremail" required></p>
+      
+      <p><label for="userpw">비밀번호 : </label><input type="password" id="userpw" name="userpw" required></p>
+    
+    <!-- 약식, 바람직 X -->
+    <!-- <label>Email : <input type="text" id="useremail"></label>  -->
+     
+    </fieldset>
+      <fieldset>
+        <legend>부가 입력</legend>
+        <p><label for="birth">생년월일 : </label><input type="date" id="birth" name="birth" placeholder="2000-10-30"></p>
+        <p><label for="address">거주지 : </label>
+          <select id="address" name="address">
+            <option value="서울특별시">서울특별시</option>
+            <option value="경기도">경기도</option>
+            <option value="제주도">제주도</option>
+        </select></p>
+        <span>결혼 여부 : </span>
+        <label for="marriged">기혼</label><input type="radio" id="marriged" name="marrige">
+        <label for="notmarriged">미혼</label><input type="radio" id="notmarriged" name="marrige">
+        <p>
+          <span>취미 : </span>
+          <label for="sports">운동</label>
+          <input type="checkbox" name="hobby" id="sports">
+          <label for="game">게임</label>
+          <input type="checkbox" name="hobby" id="game">
+          <label for="reading">독서</label>
+          <input type="checkbox" name="hobby" id="reading">
+        </p>
+        <p>
+          <label for="profile">프로필이미지 : </label>
+          <input type="file" name="profile" id="profile">
+        </p>
+        <p>
+          <label for="greeting">인삿말 : </label>
+          <textarea name="greeting" id="greeting" cols="30" rows="5"></textarea>
+        </p>
+      </fieldset>
+      <button>전송</button>
+    </form>
+</body>
+</html>

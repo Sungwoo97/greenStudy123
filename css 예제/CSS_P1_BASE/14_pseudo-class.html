@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-class Selector</title>
+    <style>
+      :link{
+        text-decoration: none;
+        color: #000;
+      }
+      /* 마우스를 올리면  */
+      a:hover{
+        text-decoration: underline;
+      }
+      h1:hover{
+        background-color:  silver;
+      }
+      /* 방문한 기록이 있다면 */
+      :visited{ 
+        color:#ccc;
+      }
+      a, input, button  {
+        outline: none;
+      }
+      a:focus{
+        text-decoration: underline;
+      }
+      input:focus{
+        background-color: #ccc;
+      }
+      input:active{
+        background-color: blue;
+        color: white;
+      }
+      button:focus{
+        background-color: blue;
+        color: #fff;
+      }
+      form p:focus-within{
+        background-color: #ebebeb;
+      }
+      a:active{
+        background-color: blue;
+        color: white;
+      }
+    </style>
+</head>
+
+<body>
+    <h1>Pseudo-class Selector</h1>
+    <p>
+        <a href="">link</a>
+        <a href="http://www.naver.com">naver</a>
+        <a href="http://www.abc.com">abc.com</a>
+    </p>
+    <form action="">
+      <p>
+        <label for="name"> Name : </label>
+        <input type="text" id="name">
+      </p>
+      <p>
+        <label for="email"> Email : </label>
+        <input type="email" id="email">
+      </p>
+        <button>send</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Lesson 4 - jQuery Validation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form action="">
+    <fieldset>
+      <legend>Message Form</legend>
+      <div>
+        <label for="username">Name</label>
+        <input type="text" id="username" name="username"  minlength="2" required autofocus value="">
+      </div>
+      <div>
+        <label for="useremail">Email</label>
+        <input type="text" id="useremail" name="useremail" required value="">
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea name="message" id="message"></textarea>
+      </div>
+    </fieldset>
+    <button>전송</button>
+  </form>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+  <script>
+    $("form").validate({
+      errorClass: "bad" ,
+      errorElement: "em",
+      rules: {
+        // simple rule, converted to {required:true}
+        username: {
+          required: true,
+          minlength: 2
+        },
+        // compound rule
+        useremail: {
+          required: true,
+          email: true
+        }
+      },
+       messages: {
+          username: {
+            required: "이름은 필수 입니다",
+            minlength: "최소 2글자 이상 입력해주세요"
+          },
+          useremail: {
+            required: "이메일도 필수입니다",
+            email: "이메일 형식에 맞춰서 입력해주세요"
+          }
+        }
+    })
+  </script>
+</body>
+</html>

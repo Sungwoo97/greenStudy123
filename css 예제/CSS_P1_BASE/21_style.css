@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Oswald:wght@200..700&display=swap');
+
+
+@font-face {
+  font-family: "Nanum Gothic";
+  src: url('/fonts/NanumGothic.woff');
+} 
+body{
+  font-family: Nanum Gothic;
+}
+
+.target{
+  font-family: "Noto Sans KR", sans-serif;
+}
+.target2{
+  font-family: "Oswald", sans-serif;
+}

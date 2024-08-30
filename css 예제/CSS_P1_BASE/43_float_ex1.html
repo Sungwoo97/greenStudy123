@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float exercise1</title>
+    <style>
+      .portfolio_list {
+          width: 860px;
+          margin: 0 auto;
+          padding: 10px;
+          background: #ebebeb;
+          overflow: auto;
+            
+        }
+        .portfolio_list li{
+          margin-right: 20px;
+          float: left;
+          list-style: none;
+        }
+        .portfolio_list li:last-of-type{
+          margin-right: 0;
+        }
+        .clear{
+          clear:left;
+        }
+        /* .cf:after{
+          content:'';
+          clear:both;
+          display: block;
+        } */
+        /* list content 뒤에 content를 만들어서 clear를 위한 block 요소 선언 후 clear */
+        nav li{
+          float: left;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>Portfolio List</h1>
+    <nav>
+      <ul class="cf">
+        <li><a href="">menu 1</a></li>
+        <li><a href="">menu 2</a></li>
+        <li><a href="">menu 3</a></li>
+        <li><a href="">menu 4</a></li>
+      </ul>
+    </nav>
+    <ul class="portfolio_list cf">
+        <li>
+            <img src="https://via.placeholder.com/200" alt="">
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/200" alt="">
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/200" alt="">
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/200" alt="">
+        </li>
+        <!-- <div class="clear"></div> 웹 표준 오류 -->
+    </ul>
+   
+</body>
+
+</html>

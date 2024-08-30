@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .number{
+      width: 400px;
+      height: 70px;
+      border: 1px solid #ccc;
+      margin: 2em auto;
+      text-align: center;
+      line-height: 70px;
+      font-size: 3em;
+      border-radius: 35px;
+      position: relative;
+      overflow: hidden;
+    }
+    .number .bar{
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 0;
+      background: #3498db;
+    }
+    .number span{
+      position: absolute;
+      right: 30px;
+      top: 0;
+      bottom: 0;
+    }
+    .number.complete span{
+      color: #fff;
+    }
+    .numbers{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+    }
+    .numbers .number{
+      margin: 1em auto;
+    }
+    .numbers .num{
+      width: 70px;
+      height: 70px;
+      border: 1px solid #ccc;
+      text-align: center;
+      line-height: 70px;
+      font-size: 3em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Number Animation</h1>
+  <div class="number" id="one" data-num="20">
+    <div class="bar"></div>
+    <span>0</span>
+  </div>
+
+  <hr>
+  <section>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+  </section>
+  <section>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+  </section>
+  <section>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+  </section>
+  <section>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+  </section>
+  <hr>
+  <div class="numbers">
+    <div class="number" data-num="40">
+        <div class="bar"></div>
+        <span>0</span>
+    </div>
+    <div class="number" data-num="100">
+      <div class="bar"></div>
+        <span>0</span>
+    </div>
+    <div class="number" data-num="75">
+      <div class="bar"></div>
+        <span>0</span>
+    </div>
+  </div>
+  <section>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+  </section>
+  <section>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+  </section>
+  <section>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+  </section>
+  <section>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis et impedit reiciendis cumque non animi dolorem alias tenetur fugiat aliquam perferendis quaerat, ipsa delectus illum similique saepe consequuntur? Aspernatur.</p>
+  </section>
+
+  <script>
+    let one = document.querySelector('#one');
+    let oneBar = one.querySelector('.bar');
+    let oneNum = one.querySelector('span');
+    let oneLimit = Number(one.getAttribute('data-num')); 
+    //대상.innerText = 값;
+    //setInterval(할일, 시간), clearinterval(대상)
+    let count = 0;
+    let autoNumber = setInterval(()=>{
+      count++;
+      oneNum.innerText = count;  
+      oneBar.style.width = count+'%';  
+      if(count === oneLimit){
+        clearInterval(autoNumber);
+      }
+    } , 100 );
+    let numbersWrap = document.querySelector('.numbers');
+    let numbersOST = numbersWrap.offsetTop - 400;
+    let animated = false;
+    window.addEventListener('scroll', ()=>{
+      if(window.scrollY > numbersOST){
+        if(!animated){
+          let numbers = document.querySelectorAll('.numbers > .number');
+          numbers.forEach(item=>{
+            let oneLimit = Number(item.getAttribute('data-num')); 
+          //대상.innerText = 값;
+          //setInterval(할일, 시간), clearinterval(대상)
+          console.log(item);
+            let count = 0;
+            let autoNumber = setInterval(()=>{
+              count++;
+              item.querySelector('span').innerText = count;
+              item.querySelector('.bar').style.width = count+'%';
+              if(count === 100){
+                  item.classList.add('complete');
+                }
+              if(count === oneLimit){
+                clearInterval(autoNumber);
+              }
+            } , 100 )
+          });
+        animated = true;
+        } 
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+form{
+  width: 80%;
+  margin: 2rem auto;
+}
+form fieldset{
+  padding: 10px;
+}
+form div{
+  display: flex;
+  align-items: start;
+  position: relative;
+}
+form div + div{
+  margin-top: 10px;
+}
+form div label{
+
+  width: 80px;
+}
+form textarea{
+  height: 100px;
+}
+em.bad{
+  background: #3498db;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 8px;
+  white-space: nowrap;
+  font-style: normal;
+  position: absolute;
+  left: 280px;
+  top: -8px;
+  animation: fadeInLeft .3s ease-out forwards;
+}
+em.bad:after{
+  content: '';
+  border-color: transparent #3498db transparent transparent;
+  border-width: 6px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: fadeInLeft .5s ease-out forwards;
+}
+@keyframes fadeInLeft{
+  from{
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  to{
+    opacity: 1;
+    transform: none;
+  }
+}

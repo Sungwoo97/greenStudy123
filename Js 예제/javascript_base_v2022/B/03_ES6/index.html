@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6</title>
+</head>
+
+<body>
+    <h1>ECMAScript 6</h1>
+    <h2>Template Literal</h2>
+    <pre>
+      backtick(``) 변수와 문자를 병합
+      backtick안에서 변수(연산, 수식)는 ${...} 작성
+    </pre>
+    <script>
+      let str1 = "hello";
+      let str2 = "world";
+      // let str3 = str1 + ' ' + str2;
+      let str3 = `${str1} ${str2}`;
+      //우리과정은 총 120일에서 오늘로 17일차이고 진행률은 ''%이며 103일 남았다.
+      let days = 17;
+      let remain = 103;
+      let total = 120;
+      // let msg = "우리과정은 총 "+total+"일에서 오늘로 "+ days + "일차이고 진행률은 "+ days/total*100+"%이며" + remain +"일 남았다.";
+      let msg = `우리과정은 총 ${total}일에서 오늘로 ${days}일차이고 진행률은 ${Math.floor(days/total*100)}%이며 ${remain}일 남았다.`;
+      document.write(str3);
+      document.write("<br>");
+      document.write(msg);
+    </script>
+    <h2>var vs. let</h2>
+    <pre>
+      블록 레벨 ( { } scope )
+      블록 범위 내에서 사용
+    </pre>
+    <script>
+      var i = 10; // 초기값 설정, 초기화
+      {
+        i = 20; // 재할당
+        var i = 20; // 초기화
+        console.log(i); // 20
+      }
+      console.log(i); // 10이 아니라 20출력, 의도가 아님
+
+      let x = 10; // 초기값 설정, 초기화
+      {
+        let x = 20; // 초기화
+        x = 30; // 재할당
+        console.log(x); //30
+      }
+      console.log(x); // 10
+    </script>
+
+    <h2>const</h2>
+    <pre>
+      contant - 상수
+      변경할 수 없는 값
+    </pre>
+    <script>
+      var i = 10;
+      i = 20;
+
+      let a = 10;
+      a = 20;
+
+      const num1 = 3;
+      //num1 = 4; // 재할당 불가
+      console.log(num1);
+    </script>
+    <hr>
+    <h2>const 변수 값의 수정 </h2>
+    <script>
+      const st = {
+        kor : 100,
+        eng : 90
+      };
+      st.kor = 90;
+      console.log(st);
+      // st = {
+      //   kor : 80,
+      //   eng : 100
+      // }; // 같은 이름으로 재할당 불가
+
+      
+
+    </script>
+    <h2>const 변수 재할당</h2>
+    <script>
+      st.math = 100;
+      console.log(st);
+    </script>
+    <h2>Arrow function 화살표 함수</h2>
+    <pre>
+      function 키워드 제거
+      () => { }
+
+      이름이 없는 익명 함수만 화살표 함수로 변경가능
+    </pre>
+    <script>    
+    </script>
+    <hr>
+    <script>
+        //1 기존 문법
+      /*  function add(x,y){
+        return x+y;
+      }*/
+      /*let add = function (x,y){
+        return x+y;
+      }*/
+      let add =  (x,y)=>{
+        return x+y;
+      }
+      console.log(add(10, 20));
+      //2 함수내에서 바로 리턴만 있을 때 중괄호 생략 가능
+      let add2 =  (x,y)=> x+y;
+      console.log(add2(10, 20));
+      /*
+      let add =  function (x)=>{
+        return x*2;
+      }      
+      */
+      //3 매개변수가 하나일 때는 괄호 생략 가능
+      let add3 = x=> x*2;
+      console.log(add3(20));
+    </script>
+    <h2>Spread Operator 전개 연산자</h2>
+    <script>
+      let arr1 = [0,1,3];
+      let arr2 = [4,5,6];
+      // let arr3 = [arr1[0], arr1[1], arr1[2], arr2[0], arr2[1], arr2[2]] ;
+      // let arr3 = [arr1.slice(), arr2.slice()];
+      let arr3 = arr1.concat(arr2);
+      let arr4 = [...arr1, ...arr2];  // 배열을 arr4에 풀어헤쳐 병합
+      let str = 'abcde';
+      let strArr = [...str];    // str 문자열을 배열로 변환
+      console.log(arr4);
+      console.log(str);
+      console.log(strArr);
+    </script>
+
+</body>
+
+</html>

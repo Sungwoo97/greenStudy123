@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="robots" content="index, follow">
+<title></title>	
+<link rel="stylesheet" href="css/main.css">
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+
+</head>
+<body>
+
+<button id="aplay">Play music</button>
+<button id="apause">Pause music</button><br>
+<hr>
+<button id="vplay">Play video</button>
+<button id="vpause">Pause video</button>
+
+<video src="video/vivaldi.mp4"></video>
+<audio src="audio/Honey_Bee_01_web.mp3"></audio>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>
+  const videoPlayBtn = $('#vplay');
+  const video = $('video');
+
+  videoPlayBtn.click(function(){
+    video.get(0).play();
+  });
+  /*
+  document.querySelector('#vplay').addEventListener('click', ()=>{
+    document.querySelector('video').play();
+  })*/
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

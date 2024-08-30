@@ -1,0 +1,144 @@
+@charset "utf-8";
+@import url('normalize.css');
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Bentham&family=Libre+Baskerville:ital@1&family=PT+Serif:ital@0;1&display=swap');
+
+:root{
+  --txt-color: #444;
+}
+
+
+
+/* TYPOGRAPHY */
+body{
+  font-family: "PT Serif", serif;
+  color: var(--txt-color);
+}
+
+/* LAYOUT */
+.container{
+  width: 640px;
+  margin:0 auto;
+}
+
+/* HEADER */
+header{
+  height: 600px;
+  /*
+  배경 지정, 반복, 너비 맞춰 늘어나고, 가운데 상단
+  background-image:url('../images/header_bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center top; 
+  */
+  background:url('../images/header_bg.jpg') no-repeat center top/cover;  
+  position: relative;
+  text-align:center;
+  padding-top:60px;
+  box-sizing: border-box;
+  h1{
+    border:1px solid #fff;
+    line-height: 51px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 0 20px;
+    letter-spacing: 0.12em;
+    font-size:30px;
+    margin-bottom:122px;
+  }
+  &:after{
+    content:'';
+    position: absolute;
+    left: 0;right: 0;bottom: 0;top: 0;
+    background: rgba(0,0,0,.5);
+    z-index:0;
+    backdrop-filter:blur(2px);
+  }
+  > *{
+    position: relative;
+    color:#fff;
+    z-index:1;
+  }
+  h2{
+    font-family: "Bentham", serif;
+    font-size:60px;
+    line-height:72px;
+    width:660px;
+    margin:0 auto 23px;
+    span{
+      font-family: "Libre Baskerville", serif;
+      font-style: italic;
+    }
+  }
+  p{
+    font-size:20px;
+    font-style:italic;
+  }
+}
+
+/* MAIN */
+main{
+  padding: 100px 0 120px;
+  h2{
+    font-size:42px;
+    line-height:50px;
+    font-family: "Bentham", serif;
+    text-transform:uppercase;
+    text-align:center;
+    margin-bottom: 30px;
+  }
+  h3{
+    font-size:14px;
+    text-align:center;
+    text-transform:uppercase;
+    margin-bottom:53px;
+  }
+  p{
+    font-size:18px;
+    line-height:34px;
+    margin-bottom:34px;
+    em{
+      color:#e3514e;
+    }
+  }
+  ul {
+    margin-top: 50px;
+    border:1px solid #838383;
+    &:after{
+      content:'';
+      display: block;
+      clear:both;
+    }
+  }
+}
+main ul li{
+  float:left;
+  width:25%;
+  border-right:1px solid #838383;
+  box-sizing:border-box;
+  text-align:center;
+  line-height: 52px;
+  font-size:16px;
+  letter-spacing: 0.04em;
+  text-transform:uppercase;
+}
+main ul li a{
+  color:#444;
+  display: block;
+}
+main ul li:last-child{
+  border-right:none;
+}
+main ul li a:hover{
+  background-color: #e3514e;
+  color:#fff;
+}
+/* FOOTER */
+footer{
+  height: 66px;
+  line-height: 66px;
+  background: #555555;
+  text-align:center;
+  font-size:14px;
+  color:#fff;
+}
