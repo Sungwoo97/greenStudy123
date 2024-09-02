@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Slick slider</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<link rel="stylesheet" href="css/main.css"/>
+	<script defer src="js/main.js"></script>
+</head>
+<body>
+	<h1>Slick</h1>
+	
+	<h2>기본 슬라이드</h2>
+    <div class="swiper basic">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/img-1.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/img-2.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/img-3.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/img-4.jpg" alt="">
+        </div>
+      </div>
+
+    <div class="swiper-pagination"></div>
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <div class="swiper-scrollbar"></div>
+  </div>
+	<hr/>		
+  <h2>좌우 컨트롤</h2>
+  <div class="wrapper control">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/img-1.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/img-2.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/img-3.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/img-4.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="myprev"><img src="images/left.png" alt=""></div>
+    <div class="mynext"><img src="images/right.png" alt=""></div>
+  </div>
+  <hr>
+  <h2>페이지네이션</h2>
+  <div class="wrapper pagination">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/img-1.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/img-2.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/img-3.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/img-4.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="myprev"><img src="images/left.png" alt=""></div>
+    <div class="mynext"><img src="images/right.png" alt=""></div>
+  </div>
+  <h2>슬라이드 옵션</h2>
+  <div class="swiper options">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="images/img-1.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/img-2.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/img-3.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/img-4.jpg" alt="">
+      </div>
+    </div>
+
+  <div class="swiper-pagination"></div>
+
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <div class="swiper-scrollbar"></div>
+  </div>
+	<div class="buttons">
+    <button id="startAutoSlide">자동슬라이드 시작</button>
+    <button id="stopAutoSlide">자동슬라이드 멈춤</button>
+  </div>
+
+  <h2>Centered Slides</h2>
+  <div class="swiper centered">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="images/img-1.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/img-2.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/img-3.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/img-4.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/img-1.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/img-2.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/img-3.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/img-4.jpg" alt="">
+      </div>
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+<h2>슬라이드 활성화</h2>
+<div class="swiper activeSlide">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <h2>Slide 1</h2>
+      <img src="images/img-1.jpg" alt="">
+    </div>
+    <div class="swiper-slide">
+      <h2>Slide 2</h2>
+      <img src="images/img-2.jpg" alt="">
+    </div>
+    <div class="swiper-slide">
+      <h2>Slide 3</h2>
+      <img src="images/img-3.jpg" alt="">
+    </div>
+    <div class="swiper-slide">
+      <h2>Slide 4</h2>
+      <img src="images/img-4.jpg" alt="">
+    </div>
+  </div>
+
+  <div class="swiper-pagination"></div>
+
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <div class="swiper-scrollbar"></div>
+</div>
+<h2>Responsive Slides</h2>
+<div class="swiper responsive">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <img src="images/img-1.jpg" alt="">
+    </div>
+    <div class="swiper-slide">
+      <img src="images/img-2.jpg" alt="">
+    </div>
+    <div class="swiper-slide">
+      <img src="images/img-3.jpg" alt="">
+    </div>
+    <div class="swiper-slide">
+      <img src="images/img-4.jpg" alt="">
+    </div>
+    <div class="swiper-slide">
+      <img src="images/img-1.jpg" alt="">
+    </div>
+    <div class="swiper-slide">
+      <img src="images/img-2.jpg" alt="">
+    </div>
+    <div class="swiper-slide">
+      <img src="images/img-3.jpg" alt="">
+    </div>
+    <div class="swiper-slide">
+      <img src="images/img-4.jpg" alt="">
+    </div>
+  </div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
+
+</body>
+</html>
