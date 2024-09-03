@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Fresco Lightbox</title>
+
+  <link rel="stylesheet" type="text/css" href="css/fresco.css" />
+  <style>
+    .gallery{
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .gallery img{
+      min-width: 200px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Image Gallery</h1>
+  <div class="gallery">
+    <a href="images/img-1.jpg" class="fresco" data-fresco-caption="gallery image 1" data-fresco-group="web">
+      <img src="images/img-1.jpg" alt="">
+    </a>
+    <a href="images/img-2.jpg" class="fresco" data-fresco-caption="gallery image 2">
+      <img src="images/img-2.jpg" alt="">
+    </a>
+    <a href="images/img-3.jpg" class="fresco" data-fresco-caption="gallery image 3" data-fresco-group="web">
+      <img src="images/img-3.jpg" alt="">
+    </a>
+    <a href="images/img-4.jpg" class="fresco" data-fresco-caption="gallery image 4">
+      <img src="images/img-4.jpg" alt="">
+    </a>
+    
+  </div>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/fresco.min.js"></script>
+  <script>
+
+  </script>
+</body>
+</html>

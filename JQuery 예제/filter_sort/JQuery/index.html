@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filter and Sort</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Filter and Sort</h1>
+  <div class="controls">
+    <div class="buttons">
+      <div class="filters">
+        <button data-filter="*">All</button>
+        <button data-filter=".web">Web</button>
+        <button data-filter=".mobile">Mobile</button>
+        <button data-filter=".app">App</button>
+        <button data-filter=".print">Print</button>
+      </div>
+      <div class="sorts">
+        <button data-sort="asc">Ascending</button>
+        <button data-sort="desc">Descending</button>
+        <button data-sort="random">Random</button>
+      </div>
+    </div>
+    <div class="selects">
+    <select name="" id="filter">
+      <option value="*">All</option>
+      <option value=".web">Web</option>
+      <option value=".mobile">Mobile</option>
+      <option value=".app">App</option>
+      <option value=".print">Print</option>
+    </select>
+    <select name="" id="sort">
+      <option value="asc">Ascending</option>
+      <option value="desc">Descending</option>
+      <option value="random">Random</option>
+    </select>
+  </div>
+  </div>
+  <ul class="product_list">
+    <li class="item web" data-order="1">Web</li>
+    <li class="item app" data-order="2">App</li>
+    <li class="item mobile" data-order="3">Mobile</li>
+    <li class="item print" data-order="4">Print</li>
+    <li class="item mobile" data-order="5">Mobile</li>
+    <li class="item web" data-order="6">Web</li>
+    <li class="item print" data-order="7">Print</li>
+    <li class="item web" data-order="8">Web</li>
+    <li class="item app" data-order="9">App</li>
+    <li class="item web" data-order="10">Web</li>
+    <li class="item mobile" data-order="11">Mobile</li>
+    <li class="item print" data-order="12">Print</li>
+  </ul>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+section{
+  height: 80vh;
+}
+.charts{
+  display: flex;
+  justify-content: center;
+  margin: 3rem auto;
+  gap: 30px;
+}
+.chart{
+  position: relative;
+}
+.chart h2{
+  margin: 0;
+  font-size: 2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.charts .chart circle{
+  fill: #ccc;
+  stroke-width: 20;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  stroke-linecap: round;
+}
+.charts .chart svg{
+  width: 220px;
+  height: 220px;
+  stroke-dasharray: 628px;
+  stroke-dashoffset: 628px;
+}
+.charts .chart:nth-child(1) circle{
+  stroke: #ffc114;
+}
+.charts .chart:nth-child(2) circle{
+  stroke: #ff5248;
+}
+.charts .chart:nth-child(3) circle{
+  stroke: #19cdca;
+}
+.charts .chart:nth-child(4) circle{
+  stroke: #4e80e1;
+}
