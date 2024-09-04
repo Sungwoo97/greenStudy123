@@ -1,0 +1,18 @@
+#line{
+  width: 80%;
+  margin: 0 auto;
+  opacity: 1;
+  transition: .5s;
+}
+#line.complete{
+  opacity: 0;
+}
+#circle{
+  width: 50%;
+  margin: 0 auto;
+}
+#number-circle{
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+}

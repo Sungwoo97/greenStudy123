@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  background: #F8FAFE;
+}
+
+.container {
+  max-width: 500px;
+	width:80%;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 3rem 2rem;
+  border-radius: 5px;
+  border: 1px solid #DBE1EC;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+form input,
+form label {
+  display: block;
+}
+
+form input[type='text'] {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  font-size: 16px;
+  outline: none;
+}
+
+form input[type='text'].type-exp-date,
+form input[type='text'].type-cvv {
+  width: 35%;
+}
+
+form button {
+  padding: 1rem 2rem;
+  border: 0;
+  background: #17a15f;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+form #cc-type {
+  margin-bottom: 1rem;
+  margin-top: -.5rem;
+  font-size: 75%;
+  display: block;
+}
