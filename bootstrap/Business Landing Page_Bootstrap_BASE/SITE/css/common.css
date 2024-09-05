@@ -1,0 +1,138 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;600;700&family=Gentium+Basic:ital@0;1&display=swap');
+
+/*
+font-family: 'Cabin', sans-serif;
+font-family: 'Gentium Basic', serif;
+*/
+
+/* ----------------- LAYOUT -------------------- */
+.container{
+    width: 1170px;
+    margin:0 auto;
+}
+.cf:after{
+    content:'';
+    clear:both;
+    display: block;
+}
+main > section{
+    padding:84px 0 42px;
+}
+.main_banner{
+    padding:84px 0 63px;
+}
+.text-center{
+    text-align: center;
+}
+.gotop {
+    margin-top: 42px;
+    font-style: italic;
+}
+hr{
+    border:none;
+    border-top:1px solid #eee;
+}
+/* ----------------- TYPOGRAPHY -------------------- */
+body{
+    font:14px/21px 'Cabin', sans-serif;
+    color: #6c6c6c;
+}
+.headline{
+    font-size: 42px;
+    text-shadow: 1px  1px 1px rgba(35,31,32,0.75);
+    letter-spacing: -0.025em;
+}
+.content-tt{
+    font-size:36px;
+    line-height: 42px;
+    color:#3b5568;
+    margin-bottom: 21px;
+    text-align: center;
+    letter-spacing: -0.025em;
+}
+.content-desc{
+    letter-spacing: -0.025em;
+    color: #6694b4;
+    font-size: 21px;
+    margin-bottom: 63px;
+    text-align: center;
+}
+/* ----------------- LINK BUTTONS -------------------- */
+a{
+    color:#ea492c;
+    text-decoration:none;
+}
+.btn{
+    display: inline-block;
+    border-radius:4px;
+    height: 53px;
+    line-height: 51px;
+    padding: 0 15px;
+    font-weight: bold;
+    background:linear-gradient(to bottom, #f95632 0%, #ed4722 100%);
+    color:#fff;
+    text-transform: uppercase;
+    text-decoration:none;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.21);
+    box-shadow:
+        0 0 0 5px rgba(126,126,126,0.1),
+        inset 1px 1px 2px rgba(255,255,255,0.41);  
+    
+}
+.sprite{
+    background: url(../images/sprites.png) no-repeat;
+    text-indent: -9999em;
+    display: inline-block;
+    vertical-align:text-top;
+}
+.sprite.phone{
+    width: 16px;
+    height: 16px;    
+    margin-right: 12px;
+}
+.sprite.envelope{
+    width: 16px;
+    height: 16px;    
+    background-position-x:-64px;
+    margin-right: 12px;
+}
+.sprite.arrow{
+    width:14px;
+    height:13px;
+    background-position-x: -128px;
+    margin-top: 2px;
+    margin-left: 12px;
+}
+.sprite.cart{
+    width: 42px;
+    height: 42px;
+    background-position: 0 -64px;
+}
+.sprite.books{
+    width: 44px;
+    height: 42px;
+    background-position: -64px -64px;
+}
+.sprite.cogs{
+    width: 42px;
+    height: 42px;
+    background-position: -128px -64px;
+}
+.social_links .sprite{
+    width: 35px;
+    height: 35px;
+    background-position-y: -192px;
+}
+
+.sprite.facebook{
+    background-position-x: -64px;
+}
+.sprite.google{
+    background-position-x: -128px;
+}
+.sprite.linked{
+    background-position-x: -192px;
+}
+/* ----------------- COLORS -------------------- */
+
