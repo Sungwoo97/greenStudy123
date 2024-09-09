@@ -1,0 +1,55 @@
+.myslide{
+  background: green;
+  color: #fff;
+  font-size: 3em;
+}
+#menu{
+  position: fixed;
+  left: 50px;
+  top: 50px;
+  display: flex;
+  gap: 20px;
+  z-index: 100;
+}
+.section3 p{
+  opacity: 0;
+  transform: translateY(100%);
+  transition: .5s .5s ease-out;
+}
+ .section3.active p{
+  opacity: 1;
+  transform: none;
+}
+.controls{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  z-index: 100;
+  button{
+    font-size: 3em;
+  }
+}
+#top{
+  position: fixed;
+  z-index: 100;
+  right: 50px;
+  bottom: 50px;
+  background: #000;
+  color:#fff;
+  padding: 10px;
+  opacity: 0;
+  visibility: hidden;
+}
+#top.active{
+  opacity: 1;
+  visibility: visible;
+}
+@media (max-width:500px){
+  .controls{
+    display: none;
+  }
+}
