@@ -1,0 +1,8 @@
+#barChart {
+  width: 800px;
+  height: 600px;
+}
+#barChart svg{
+  width: 100%;
+  height: 100%;
+}
