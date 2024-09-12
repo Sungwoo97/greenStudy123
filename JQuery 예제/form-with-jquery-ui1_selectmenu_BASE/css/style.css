@@ -1,0 +1,64 @@
+* { box-sizing: border-box; }
+body {
+  background-color: #eee;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  background-color: #fff;
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.container h1 { text-align: center; }
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px ;
+}
+
+.fields option{
+  background: #ccc;
+}
+.fields option:hover{
+  background: green;
+  color: #fff;
+}
+.fields label{
+  display: block;
+}
+.fields .ui-button,
+.fields .ui-spinner{
+  width: 100%;
+}
+
+#category{
+  font-size: 18px;
+  text-align: left;
+}
+.fields .ui-spinner-button{
+  width: 1.6em;
+}
+.fields input{
+  outline: none;
+}
+.fields:focus-within .ui-widget{
+  border-color: blueviolet;
+}
+#progress{
+  position: relative;
+}
+#progress .percent{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+fieldset.fields label{
+  display: inline-block
+}
+fieldset.fields .ui-button{
+  width: auto;
+}

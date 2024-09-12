@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Form Elements With jQuery UI #1</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div id="progress">
+      <div class="bar light-blue accent-2"></div>
+      <div class="percent">
+          <span>0</span>% Completed
+      </div>
+    </div>
+  <form>
+    <h1>jQuery UI Form Elements</h1>
+    <div class="fields input-field location">
+      <select name="" id="location">
+        <option value="" readonly>희망 지역을 선택해주세요</option>
+        <optgroup label="경기도">
+          <option value="고양시">고양시</option>
+          <option value="일산시">일산시</option>
+          <option value="파주시">파주시</option>
+        </optgroup>
+        <optgroup label="서울특별시">
+          <option value="마포구">마포구</option>
+          <option value="종로구">종로구</option>
+          <option value="강남구">강남구</option>
+        </optgroup>
+      </select>
+      <label for="location">Select a location</label>
+    </div>
+    <div class="fields input-field">
+      <label for="category">Category</label>
+        <input type="text" id="category"class="ui-button ui-corner-all ui-widget">
+    </div>
+    <div class="fields input-field">
+      <label for="experience">Experience</label>
+        <input type="number" min="1" max="5" id="experience" >
+    </div>
+    <div class="fields input-field">
+      <label for="start">When can you start?</label>
+        <input type="text" id="start"class="ui-button ui-corner-all ui-widget" >
+    </div>
+    <fieldset class="fields input-field">
+      <legend>How did you hear about us?</legend>
+      <div>
+        <p>
+          <label>
+            <input type="radio" name="referer" id="internet">
+            <span>Internet</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="radio" name="referer" id="tv">
+            <span>TV</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="radio" name="referer" id="other">
+            <span>Other</span>
+          </label>
+        </p>
+      </div>
+    </fieldset>
+    <button class="btn waves-effect waves-light" type="submit" name="action" disabled>Submit
+      <i class="material-icons right">send</i>
+    </button>
+  </form>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="form.js"></script>
+</body>
+</html>
