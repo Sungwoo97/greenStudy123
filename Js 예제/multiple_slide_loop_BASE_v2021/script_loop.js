@@ -14,9 +14,9 @@ let slidesHTML = slidecontainer.innerHTML;
 let clonedSlidesHTML = slidesHTML.replace(/<li>/g, '<li class="clone">');
 slidecontainer.innerHTML = clonedSlidesHTML + slidecontainer.innerHTML; 
 slidecontainer.innerHTML += clonedSlidesHTML; 
+const allSlideCount = slidecontainer.querySelectorAll('li').length;
 console.log(slidecontainer.innerHTML);
 
-const allSlideCount = slidecontainer.querySelectorAll('li').length;
 
 /*for(let slide of slides){
   let cloneSlide = slide.cloneNode(true); // deep copy
