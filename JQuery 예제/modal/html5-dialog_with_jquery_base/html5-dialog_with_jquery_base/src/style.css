@@ -1,0 +1,9 @@
+dialog{
+	border:2px solid black;
+	background:red;
+	color:#fff;
+}
+dialog span{
+	display:block;
+	cursor:pointer;
+}
