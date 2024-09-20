@@ -1,0 +1,60 @@
+@charset "utf-8";
+@layer reset, base, utils, theme;
+
+@import url(reset.css) layer(reset);
+/* @import url(reset.css) layer;
+@import url(base.css) layer; */
+/* 
+body{
+  background: navy;
+} */
+
+@layer theme{
+  body{
+    background: #ccc;
+  }
+  h1{
+    color:red;
+  }
+  .no-theme{
+    color:revert-layer
+  }
+  .nesting p {
+    color:green;
+  }
+}
+
+@layer base{
+  body {
+    background: #000;
+    color: #fff;
+  }
+}
+
+@layer utils{
+  body{
+    background: green;
+    color: #fff;
+  }
+  h1{
+    color:blue;
+  }
+  @layer theme{
+    .nesting p {
+      font-style:italic;
+    }
+  }
+}
+@layer utils.theme{
+  .nesting p{
+    text-decoration: underline;
+  }
+}
+
+@media (max-width:768px){
+  @layer theme{
+    body{
+      background: #fff;
+    }
+  }
+}

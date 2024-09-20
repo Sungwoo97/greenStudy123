@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tailwind CSS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+  <header class="bg-indigo-700 text-white p-3 fixed w-full top-0">
+    <div class="flex justify-between">
+      <h1 class="font-bold mont text-sm">Logo</h1>
+      <nav>
+        <ul class="flex gap-3 text-xs text-gray-400">
+          <li><a href="" class="hover:text-white hover:underline">Menu1</a></li>
+          <li><a href="" class="hover:text-white hover:underline">Menu2</a></li>
+          <li><a href="" class="hover:text-white hover:underline">Menu3</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="flex p-3">
+    <aside class="w-60 fixed top-20 hidden md:block">
+      <nav >
+        <h2 class="heading">Aside Menu</h2>
+        <ul class="text-gray-500 mb-4">
+          <li><a href="">Sub Menu 1</a></li>
+          <li><a href="">Sub Menu 2</a></li>
+          <li><a href="">Sub Menu 3</a></li>
+          <li><a href="">Sub Menu 4</a></li>
+        </ul>
+        <h2 class="heading">Aside Menu</h2>
+        <ul class="text-gray-500">
+          <li><a href="">Sub Menu 1</a></li>
+          <li><a href="">Sub Menu 2</a></li>
+          <li><a href="">Sub Menu 3</a></li>
+          <li><a href="">Sub Menu 4</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <section class="w-full md:ml-60">
+      <h2 class="text-lg font-extrabold mb-4">Main Content</h2>
+      <section class="divide-y divide-solid flex flex-col gap-3">
+
+        <article >
+          <h3 class="mb-2">Article Title</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequuntur doloribus, natus consequatur, fugit sed eos sint eaque officia earum veritatis atque itaque, eius voluptatem dolores dignissimos molestias? Ab, repellat?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam pariatur soluta error alias ipsam laborum earum accusantium, saepe recusandae atque ex libero deserunt a quae impedit autem facilis magni maiores.</p>
+        </article >
+        <article class="pt-3">
+          <h3 class="mb-2">Article Title</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequuntur doloribus, natus consequatur, fugit sed eos sint eaque officia earum veritatis atque itaque, eius voluptatem dolores dignissimos molestias? Ab, repellat?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam pariatur soluta error alias ipsam laborum earum accusantium, saepe recusandae atque ex libero deserunt a quae impedit autem facilis magni maiores.</p>
+        </article>
+        <article class="pt-3">
+          <h3 class="mb-2">Article Title</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequuntur doloribus, natus consequatur, fugit sed eos sint eaque officia earum veritatis atque itaque, eius voluptatem dolores dignissimos molestias? Ab, repellat?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam pariatur soluta error alias ipsam laborum earum accusantium, saepe recusandae atque ex libero deserunt a quae impedit autem facilis magni maiores.</p>
+        </article>
+        <article class="pt-3">
+          <h3 class="mb-2">Article Title</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequuntur doloribus, natus consequatur, fugit sed eos sint eaque officia earum veritatis atque itaque, eius voluptatem dolores dignissimos molestias? Ab, repellat?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam pariatur soluta error alias ipsam laborum earum accusantium, saepe recusandae atque ex libero deserunt a quae impedit autem facilis magni maiores.</p>
+        </article>
+        <article class="pt-3">
+          <h3 class="mb-2">Article Title</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequuntur doloribus, natus consequatur, fugit sed eos sint eaque officia earum veritatis atque itaque, eius voluptatem dolores dignissimos molestias? Ab, repellat?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam pariatur soluta error alias ipsam laborum earum accusantium, saepe recusandae atque ex libero deserunt a quae impedit autem facilis magni maiores.</p>
+        </article>
+        <article class="pt-3">
+          <h3 class="mb-2">Article Title</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequuntur doloribus, natus consequatur, fugit sed eos sint eaque officia earum veritatis atque itaque, eius voluptatem dolores dignissimos molestias? Ab, repellat?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam pariatur soluta error alias ipsam laborum earum accusantium, saepe recusandae atque ex libero deserunt a quae impedit autem facilis magni maiores.</p>
+        </article>
+        <article class="pt-3">
+          <h3 class="mb-2">Article Title</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequuntur doloribus, natus consequatur, fugit sed eos sint eaque officia earum veritatis atque itaque, eius voluptatem dolores dignissimos molestias? Ab, repellat?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam pariatur soluta error alias ipsam laborum earum accusantium, saepe recusandae atque ex libero deserunt a quae impedit autem facilis magni maiores.</p>
+        </article>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
