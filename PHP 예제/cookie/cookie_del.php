@@ -1,5 +1,5 @@
 <?php
-  setcookie('city', 'seoul', time()+60);
+  setcookie('city', 'seoul', time()-60);
   // print_r($_COOKIE["city"]);
 ?>
 
@@ -8,7 +8,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>쿠키</title>
+  <title>쿠키삭제</title>
 </head>
 <body>
   <h1>쿠키</h1>

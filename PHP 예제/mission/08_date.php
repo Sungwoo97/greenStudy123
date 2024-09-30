@@ -13,6 +13,7 @@
 
   <?php
     $today = date("Y.m.d"); 
+   
     echo $today;   
   ?>
   <h3>1-2</h3>
@@ -24,10 +25,8 @@
   <h3>1-3</h3>
   <p>php.net date, mktime 함수 참조하여 오늘로 부터 한달후 날짜를 2024-05-21와 같이 출력</p>  
   <?php
-  mktime({
-    ?int month += 1;
-  });
-    $today = date("Y.m.d"); 
+    $today = date("Y.m.d", strtotime("+1 month")); 
+    echo $today;
   ?>
   
 </body>

@@ -2,6 +2,9 @@
   if(!isset($title)){
     $title = '';
   }
+  if(!isset($_SESSION)){
+    session_start();
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,6 +21,14 @@
         <li><a href="about.php">About</a></li>
         <li><a href="works.php">works</a></li>
         <li><a href="contact.php">contact</a></li>
+        <li><a href="mypage.php">mypage</a></li>
+        <?php
+          if(isset($_SESSION['useremail'])){  // 로그인 후
+            echo '<li><a href="logout.php">logout</a></li>';
+          }else{  //로그인 전
+            echo '<li><a href="login.php">login</a></li>';
+          }
+        ?>
       </ul>
     </nav>
   </header>
