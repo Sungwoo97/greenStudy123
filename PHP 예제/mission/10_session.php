@@ -23,7 +23,9 @@
   <?php
   //UID세션변수의 값이 있다면, 세션에 저장된 값이 admin가 일치한다면 amdin님 반갑습니다. 경고창을 띄운다.
   if(isset($_SESSION['UID']) && $_SESSION['UID'] === 'admin'){
-    echo "{$_SESSION['UID']}님 반갑습니다.";
+    echo "<script>
+    alert(' admin님 반갑습니다');
+    </script>";
   }
   else{
     echo "다시 로그인 해주세요";

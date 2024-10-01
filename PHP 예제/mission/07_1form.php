@@ -22,7 +22,7 @@
     <button>send</button>
   </form>
   <h2>1-3</h2>  
-  <form action="07_4form_ok.php?userid=test" method="post">
+  <form action="07_4form_ok.php?subscribe=gold" method="post">
     이름: <input type="text" name="username">
     <button>send</button>
   </form>

@@ -9,8 +9,9 @@ require_once('config.php');
 $username = $_POST['name'];
 $title = $_POST['title'];
 $message = $_POST['message'];
+// msg_board의 테이블에 대입될 값을 지정해주고 (VALUES) 에 하나하나 대입해서 저장
 $sql = "INSERT INTO msg_board (title, message, name) VALUES('$title','$message','$username')";
-
+// 쿼리에 명령어 실행
 $result = mysqli_query($mysqli, $sql);
 
 if(isset($result)){

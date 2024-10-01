@@ -42,12 +42,12 @@
   <p>빈 배열 langs를 생성하고, 연관배열의 키값 '구조'에 'html', 키값 '스타일'에 'css', 키값 '동적요소'에 javascript을 할당하고 출력한다.</p>
 
   <?php
-    $langs = array();        
+    //$langs = array();        
     //연관 배열 생성
     $langs = array('구조' => 'html', '스타일' => 'css', '동적요소' => 'javascript');
   //foreach활용 key과 value 출력
     foreach($langs as $lang => $value){
-        echo $lang.' '.$value.'<br>';
+        echo $lang.'-'.$value.'<br>';
     }
   ?>
   <h3>1-5</h3>

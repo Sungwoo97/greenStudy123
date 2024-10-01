@@ -10,6 +10,10 @@
   <h3>1-2</h3>
   <!--  코드 작성   -->
   <p>반갑습니다. <?= $_POST['username'] ?>님!</p>
+
+  <?php
+    print_r($_REQUEST);
+  ?>
 </body>
 </html>
 
