@@ -19,6 +19,10 @@
   <label for="content" class="form-label">내용 </label>
   <textarea class="form-control" name="content" id="content" rows="3"></textarea required>
 </div>
+<div class="mb-3">
+  <label for="lockpost" class="form-check-label">글 잠금</label>
+  <input type="checkbox" id="lockpost" name="lockpost" class="form-check-input">
+</div>
 <button class="btn btn-primary">전송</button>
 </form>
 

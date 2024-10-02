@@ -6,8 +6,14 @@
   $userpw = password_hash($_POST['pw'], PASSWORD_DEFAULT);
   $title = $_POST['title'];
   $content = $_POST['content'];
+  //값이 있다면 lockpost에 1을 저장한다
+  if(isset($_POST['lockpost'])){
+    $lock_post = 1;
+  }else{
+    $lock_post = 0;
+  }
 
-  $sql = "INSERT INTO board (name, pw, title, content) VALUES('$username','$userpw','$title', '$content')";
+  $sql = "INSERT INTO board (name, pw, title, content, lock_post) VALUES('$username','$userpw','$title', '$content', $lock_post)";
 
   // $result = $mysqli->query($sql);
 
