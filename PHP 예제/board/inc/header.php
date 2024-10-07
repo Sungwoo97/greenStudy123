@@ -14,3 +14,5 @@
 </head>
 <body>
   <div class="container">
+    <h1><a href="http://<?= $_SERVER['HTTP_HOST'] ?>/board/index.php">Home</a></h1>
+    <hr>

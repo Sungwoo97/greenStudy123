@@ -13,7 +13,27 @@
     $lock_post = 0;
   }
 
-  $sql = "INSERT INTO board (name, pw, title, content, lock_post) VALUES('$username','$userpw','$title', '$content', $lock_post)";
+   //print_r($_FILES['file']);
+
+  $max_file_size = 10*1024*1024;
+
+  if($_FILES['file']['size'] > $max_file_size){
+    echo "<script>
+    alert('10MB 이상은 첨부할 수 없습니다.');
+    history.back();
+    </script>";
+    exit;
+  }
+
+  //파일 업로드
+  $file_name = $_FILES['file']['name'];
+  $temp_path = $_FILES['file']['tmp_name'];
+  $upload_path = '../upload/'.$file_name;
+  move_uploaded_file($temp_path, $upload_path); 
+
+  strpos($_FILES['file']['type'], 'image') !== false ? $is_img = 1 : $is_img = 0;
+
+  $sql = "INSERT INTO board (name, pw, title, content, file, lock_post, is_img) VALUES('$username','$userpw','$title', '$content', '$upload_path', $lock_post, $is_img)";
 
   // $result = $mysqli->query($sql);
 

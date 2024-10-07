@@ -26,6 +26,14 @@
  <!-- 글 본문 -->
 <div>
   <?= $data['content'] ?>
+  <?php
+    if($data['is_img'] == 1){
+      echo "<br><img src=\"{$data['file']}\">";
+    }else{
+      echo "<hr>";
+      echo "첨부파일 :<a href=\"{$data['file']}\">다운로드</a>";
+    }
+  ?>
 </div>
 <hr>
 <div class="d-flex justify-content-between align-items-center">
@@ -54,17 +62,20 @@
       <div class="contents">
         <div class="content">
           <?= $row['content'] ?>
+        
         </div>
         <small><?= $row['name'] ?> / <?= $row['date'] ?></small>
       </div>
       <div class="controls">
-        <button class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#reply_edit<?= $row['idx']; ?>">수정</button>
-        <button class="btn btn-danger btn-sm">삭제</button>
+        <button class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#reply_edit<?= $row['idx'] ?>">수정</button>
+        <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#reply_delete<?= $row['idx'] ?>">삭제</button>
       </div>
-      <div class="modal fade" id="reply_edit<?= $row['idx']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <!-- Edit Modal -->
+      <div class="modal fade" id="reply_edit<?= $row['idx'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <form action="reply_modify_ok.php" method="POST" class="modal-content">
-            <input type="hidden" name="idx" value="<?= $row['idx']; ?>">
+            <input type="hidden" name="r_no" value="<?= $row['idx'] ?>">
+            <input type="hidden" name="b_no" value="<?= $idx ?>">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="exampleModalLabel">댓글 수정</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -83,6 +94,27 @@
           </form>
         </div>
       </div>
+      <!-- Delete Modal -->
+      <div class="modal fade" id="reply_delete<?= $row['idx'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <form action="reply_delete_ok.php" method="POST" class="modal-content">
+            <input type="hidden" name="r_no" value="<?= $row['idx'] ?>">
+            <input type="hidden" name="b_no" value="<?= $idx ?>">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">댓글 삭제</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <label for="password01" class="form-label">비밀번호 : </label>
+              <input type="password" id="password01" name="pw" class="form-control" >
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+              <button type="submit" class="btn btn-primary">확인</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </li>
     <?php
       }
@@ -90,6 +122,7 @@
   </ul>
 </div>
 <hr>
+
 <h2>댓글 달기</h2>
 <form action="reply_ok.php" method="POST">
   <input type="hidden" name="idx" value="<?= $idx ?>">

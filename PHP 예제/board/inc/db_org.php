@@ -1,6 +1,6 @@
 <?php 
   //객체 지향 
-  $mysqli = new mysqli('localhost', 'ssungwoo', 'tjddn8561!', 'ssungwoo');
+  $mysqli = new mysqli('localhost', 'greenart', 'green12345', 'greenart');
 
   // 에러 체크(절차 지향)
   /*if(mysqli_connect_errno()){
