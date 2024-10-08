@@ -14,28 +14,26 @@ while($data = $result->fetch_object()){ //조회된 값들마다 할 일, 있으
     <h1>카테고리</h1>
     <div class="row">
       <div class="col-md-4">
-      <select class="form-select" id="cate1" aria-label="대분류 선택">
-        <option selected>대분류 선택</option>
-        <?php
-          foreach($cate1 as $c1){ 
-        ?>
-        <option value="<?= $c1->code ?>"><?= $c1->name ?></option>
-        <?php
-          }
-        ?>
-      </select>
+        <select class="form-select" id="cate1" aria-label="대분류 선택">
+          <option selected>대분류 선택</option>
+          <?php
+            foreach($cate1 as $c1){ 
+          ?>
+          <option value="<?= $c1->code ?>"><?= $c1->name ?></option>
+          <?php
+            }
+          ?>
+        </select>
       </div>
       <div class="col-md-4">
-      <select class="form-select" id="cate2" aria-label="중분류 선택">
-        <option selected>대분류를 먼저 선택하세요</option>
-
-      </select>
+        <select class="form-select" id="cate2" aria-label="중분류 선택">
+          <option selected>대분류를 먼저 선택하세요</option>
+        </select>
       </div>
       <div class="col-md-4">
-      <select class="form-select" id="cate3" aria-label="Default select example">
-        <option selected>중분류를 먼저 선택하세요</option>
-
-      </select>
+        <select class="form-select" id="cate3" aria-label="Default select example">
+          <option selected>중분류를 먼저 선택하세요</option>
+        </select>
       </div>
     </div>
     <div class="btns mt-3">
@@ -111,7 +109,7 @@ while($data = $result->fetch_object()){ //조회된 값들마다 할 일, 있으
     <!-- Modal 3 -->
     <div class="modal fade" id="cate3_modal" tabindex="-1" aria-labelledby="cate3_modal" aria-hidden="true">
       <div class="modal-dialog">
-        <div class="modal-content">
+        <form action="" data-step="3" class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="exampleModalLabel">소분류 등록</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -147,28 +145,35 @@ while($data = $result->fetch_object()){ //조회된 값들마다 할 일, 있으
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
-            <button type="button" class="btn btn-primary">등록</button>
+            <button type="submit" class="btn btn-primary">등록</button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   </div>
   <script>
+    //카테고리 페이지의 대분류가 변경될 때
     $('#cate1').change(function(){
       makeOption($(this), 2, '중분류', $('#cate2'));
     });
+    //카테고리 페이지의 중분류가 변경될 때
     $('#cate2').change(function(){
       makeOption($(this), 3, '소분류', $('#cate3'));
     });
+    // Modal 3 소분류 등록의 대분류가 변경될 때
+    $('#pcode3').change(function(){
+      makeOption($(this), 2, '중분류', $('#pcode4'));
+    });
+
 
     async function makeOption(e,step,category,target){
     let cate = e.val();
 
-    let data = new URLSearchParams({
-      cate:cate,
-      step:step,
-      category:category
-    });
+      let data = new URLSearchParams({
+        cate:cate,
+        step:step,
+        category:category
+      });
 
 
     try{
@@ -219,21 +224,36 @@ while($data = $result->fetch_object()){ //조회된 값들마다 할 일, 있으
 
     $('.modal-content').submit(function(e){
       e.preventDefault();
-      let step = $(this).attr('data-step');
+      let step = Number($(this).attr('data-step'));
+      let pcode = $(`#pcode${step}`).val(); //부모코드
+      let pcode1 = $(`#pcode${step+1}`).val();  //소분류 일때 부모코드
       let code = $(`#code${step}`).val();
       let name = $(`#name${step}`).val();
-      
-      category_save(step,code,name);
+      console.log(pcode1);
+      if(step > 1 && !pcode){
+        alert('대분류를 선택하세요');
+        return;
+      }
+      if(step > 2 && !pcode1){
+        alert('중분류를 선택하세요');
+        return;
+      }
+      if(pcode1){ //중분류가 있다면 
+        pcode = pcode1;
+      }
+      category_save(step,pcode,code,name);
     })
 
-    function category_save(step,code,name){
-
+    function category_save(step, pcode, code, name){
       //save_category.php
       let data = {
         name:name,
+        pcode:pcode,
         code:code,
         step:step
       }
+      console.log(data);
+     
       $.ajax({
         async:false, //printOption.php의 결과(result)가 있을때 이후 수행
         type:'post',  //요청의 타입을 post 방식
@@ -241,7 +261,7 @@ while($data = $result->fetch_object()){ //조회된 값들마다 할 일, 있으
         dataType : 'json', // 서버로부터 반환되는 데이터의 형식 성공 {'result' : 1} 실패 {'result' : 0} 실패 {'result' : -1}
         url: "save_category.php", 
         success: function(returned_data){
-         console.log(returned_data.result);
+         //console.log(returned_data.result);
           if(returned_data.result == 1){
             alert('등록 완료');
             location.reload(); //새로고침
