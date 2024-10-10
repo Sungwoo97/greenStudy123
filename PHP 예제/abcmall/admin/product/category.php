@@ -1,6 +1,14 @@
 <?php
 include_once($_SERVER['DOCUMENT_ROOT'].'/abcmall/admin/inc/header.php');
 
+//관리자가 아니면 접속할 수 없도록 조건
+if(!isset($_SESSION['AUID'])){
+  echo "<script>
+    alert('관리자로 로그인해주세요.');
+    location.href = '../login.php';
+  </script>";
+}
+
 //대분류 조회 (step = 분류의 단계)
 $sql = "SELECT * FROM category WHERE step = 1";
 // sql의 문장에 문제가 없으면 실행하고 문제가 있다면 실행을 중지하고 실행 후 에러가 무엇인지 출력
@@ -8,6 +16,7 @@ $result = $mysqli->query($sql) or die('query error :'.$mysqli->error);
 while($data = $result->fetch_object()){ //조회된 값들마다 할 일, 있으면 $data할당
   $cate1[] = $data; //$cate1 배열에 $data 할당
 }
+$mysqli->close();
 //  print_r($cate1);
 ?>
   <div class="container">

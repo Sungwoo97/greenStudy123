@@ -27,10 +27,14 @@ $ext = pathinfo($filename, PATHINFO_EXTENSION); //파일명에서 확장자만 �
 $newFileName = date('YmdHis').substr(rand(),0 ,6); //20241008456213
 $savefile = $newFileName.'.'.$ext;  //20241008456213.jpg
 
+//임시 위치에 있던 파일을 정위치로 이동시켜줌
 if(move_uploaded_file($added_file['tmp_name'], $save_dir.$savefile)){
+  //
   $sql = "INSERT INTO product_image_table (userid, filename) VALUES ('{$_SESSION['AUID']}', '$savefile')";
   $result = $mysqli->query($sql);
-  $imgid = $mysqli->insert_id; //테이블에 자동으로 저장되는 고유번호(pk) 조회
+  // product 테이블과 연결하기 위해 테이블에 자동 저장되는 고유 번호를 조회
+  $imgid = $mysqli->insert_id; 
+  //조회한 고유번호와 저장한 파일의 이름을 넘겨줌
   $return_data = array('result'=> '성공', 'imgid'=>$imgid, 'savefile'=>$savefile );   //연관배열
   echo json_encode($return_data);   //연관배열 -> 객체
   exit;
@@ -39,5 +43,5 @@ if(move_uploaded_file($added_file['tmp_name'], $save_dir.$savefile)){
   echo json_encode($return_data);   //연관배열 -> 객체
   exit;
 }
-
+$mysqli->close();
 ?>

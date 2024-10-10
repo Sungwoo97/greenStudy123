@@ -38,5 +38,5 @@ if($result){
   echo json_encode($return_data);
 }
 
-
+$mysqli->close();
 ?>

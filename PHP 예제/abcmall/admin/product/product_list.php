@@ -2,6 +2,15 @@
 $title = "상품목록";
 include_once($_SERVER['DOCUMENT_ROOT'].'/abcmall/admin/inc/header.php');
 
+//관리자가 아니면 접속할 수 없도록 조건
+if(!isset($_SESSION['AUID'])){
+  echo "<script>
+    alert('관리자로 로그인해주세요.');
+    location.href = '../login.php';
+  </script>";
+}
+
+
 ?>
   <div class="container">
     <h1>상품리스트</h1>
