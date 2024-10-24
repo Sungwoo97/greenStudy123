@@ -61,7 +61,7 @@ $row_num = $page_data['cnt'];
 }else{
   $page = 1;
 }
-$list = 3;
+$list = 10;
 $start_num = ($page - 1 )*$list;
 $block_ct = 5;
 $block_num = ceil($page/$block_ct);  //8
@@ -74,7 +74,7 @@ $total_block = ceil($total_page/$block_ct);
 if($block_end > $total_page) $block_end = $total_page;
 
 
-$sql = "SELECT * FROM products WHERE 1 = 1 $search_where ORDER BY reg_date DESC LIMIT $start_num, $list"; //products 테이블에서 모든 데이터를 조회
+$sql = "SELECT * FROM products WHERE 1 = 1 $search_where ORDER BY pid DESC LIMIT $start_num, $list"; //products 테이블에서 모든 데이터를 조회
 $result = $mysqli->query($sql); //쿼리 실행 결과
 
 
@@ -136,63 +136,68 @@ while($data = $result->fetch_object()){
   <hr>
   총 상품 수 : <?= $row_num ?>
   <hr>
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">No. </th>
-        <th scope="col">썸네일</th>
-        <th scope="col">제품명</th>
-        <th scope="col">가격</th>
-        <th scope="col">메인</th>
-        <th scope="col">신제품</th>
-        <th scope="col">베스트</th>
-        <th scope="col">추천</th>
-        <th scope="col">상태</th>
-        <th scope="col">보기</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- $dataArr의 값으로 foreach로 tr 출력 -->
-      <?php
-        if(isset($dataArr)){
-          foreach($dataArr as $item){
-      ?> 
-      <tr>
-        <th scope="row"><?= $item->pid; ?></th>
-        <td>
-          <img src="<?= $item->thumbnail; ?>" width="90" alt="">
-        </td>
-        <td><?= $item->name; ?></td>
-        <td><?= $item->price; ?></td>
-        <td>
-          <input type="checkbox" class="form-check-input" <?php echo $item->ismain ? 'checked' : ''; ?> name="ismain[<?= $item->pid; ?>]" id="ismain[<?= $item->pid; ?>]" >
-        </td>
-        <td>
-          <input type="checkbox" class="form-check-input" <?php echo $item->isnew ? 'checked' : ''; ?> name="isnew[<?= $item->pid; ?>]" id="isnew[<?= $item->pid; ?>]" >
-        </td>
-        <td>
-          <input type="checkbox" class="form-check-input" <?php echo $item->isbest ? 'checked' : ''; ?> name="isbest[<?= $item->pid; ?>]" id="isbest[<?= $item->pid; ?>]" >
-        </td>
-        <td>
-          <input type="checkbox" class="form-check-input" <?php echo $item->isrecom ? 'checked' : ''; ?> name="isrecom[<?= $item->pid; ?>]" id="isrecom[<?= $item->pid; ?>]" >
-        </td>
-        <td>
-          <select class="form-select" aria-label="판매여부" name="status[<?= $item->pid; ?>]" id="status[<?= $item->pid; ?>]">
-            <option value="-1" <?php if($item->status == -1){echo 'selected';}?>>판매중지</option>
-            <option value="0" <?php if($item->status == 0){echo 'selected';}?>>대기</option>
-            <option value="1" <?php if($item->status == 1){echo 'selected';}?>>판매중</option>
-          </select>
-        </td>
-        <td>
-          <a href="product_view.php?pid=<?= $item->pid; ?>" class="btn btn-primary btn-sm">상세보기</a>
-        </td>
-      </tr>
-      <?php
+  <form action="plist_update.php" method="GET">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">No. </th>
+          <th scope="col">썸네일</th>
+          <th scope="col">제품명</th>
+          <th scope="col">가격</th>
+          <th scope="col">메인</th>
+          <th scope="col">신제품</th>
+          <th scope="col">베스트</th>
+          <th scope="col">추천</th>
+          <th scope="col">상태</th>
+          <th scope="col">보기</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- $dataArr의 값으로 foreach로 tr 출력 -->
+        <?php
+          if(isset($dataArr)){
+            foreach($dataArr as $item){
+        ?> 
+        <tr>
+          <th scope="row">
+            <input type="hidden" name="pid[]" value="<?= $item->pid; ?>">
+            <?= $item->pid; ?></th>
+          <td>
+            <img src="<?= $item->thumbnail; ?>" width="90" alt="">
+          </td>
+          <td><?= $item->name; ?></td>
+          <td><?= $item->price; ?></td>
+          <td>
+            <input type="checkbox" class="form-check-input" <?php echo $item->ismain ? 'checked' : ''; ?> name="ismain[<?= $item->pid; ?>]" id="ismain[<?= $item->pid; ?>]" value="<?=  $item->ismain ?>" >
+          </td>
+          <td>
+            <input type="checkbox" class="form-check-input" <?php echo $item->isnew ? 'checked' : ''; ?> name="isnew[<?= $item->pid; ?>]" id="isnew[<?= $item->pid; ?>]" value="<?=  $item->isnew ?>" >
+          </td>
+          <td>
+            <input type="checkbox" class="form-check-input" <?php echo $item->isbest ? 'checked' : ''; ?> name="isbest[<?= $item->pid; ?>]" id="isbest[<?= $item->pid; ?>]" value="<?=  $item->isbest  ?>" >
+          </td>
+          <td>
+            <input type="checkbox" class="form-check-input" <?php echo $item->isrecom ? 'checked' : ''; ?> name="isrecom[<?= $item->pid; ?>]" id="isrecom[<?= $item->pid; ?>]" value="<?=  $item->isrecom  ?>" >
+          </td>
+          <td>
+            <select class="form-select" aria-label="판매여부" name="status[<?= $item->pid; ?>]" id="status[<?= $item->pid; ?>]">
+              <option value="-1" <?php if($item->status == -1){echo 'selected';}?>>판매중지</option>
+              <option value="0" <?php if($item->status == 0){echo 'selected';}?>>대기</option>
+              <option value="1" <?php if($item->status == 1){echo 'selected';}?>>판매중</option>
+            </select>
+          </td>
+          <td>
+            <a href="product_view.php?pid=<?= $item->pid; ?>" class="btn btn-primary btn-sm">상세보기</a>
+          </td>
+        </tr>
+        <?php
+            }
           }
-        }
-      ?> 
-    </tbody>
-  </table>
+        ?> 
+      </tbody>
+    </table>
+    <button class="btn btn-secondary btn-sm ms-auto d-block">일괄 수정</button>
+  </form>
   <nav aria-label="Page navigation example">
       <ul class="pagination d-flex justify-content-center">
         <?php
@@ -226,7 +231,9 @@ while($data = $result->fetch_object()){
       </ul>
     </nav>
   <hr>
-  <a href="product_up.php" class="btn btn-primary">상품등록</a>
+  <div class="d-flex justify-content-end">
+    <a href="product_up.php" class="btn btn-primary">상품등록</a>
+  </div>
 </div>
 
 <script src="http://<?= $_SERVER['HTTP_HOST']?>/abcmall/admin/js/category_option.js"></script>
@@ -234,6 +241,14 @@ while($data = $result->fetch_object()){
 <script>
   $( "#datepicker" ).datepicker({
     dateFormat: "yy-mm-dd"
+  });
+  // 상품 리스트의 체크박스 값을 바꿔주는 함수
+  $('table .form-check-input').change(function(){
+    if($(this).prop('checked')){
+      $(this).val('1');
+    }else{
+      $(this).val('0');
+    }
   });
 </script>
 

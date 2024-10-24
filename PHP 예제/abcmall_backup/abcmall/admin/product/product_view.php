@@ -17,10 +17,10 @@ $data = $result->fetch_object();
 
 $cate = $data->cate;
 $cate1 = substr($cate, 0 ,5); 
-$cate2 = substr($cate, 5 ,5) ;
-$cate3 = substr($cate, 10 ,5) ;
+$cate2 = substr($cate, 5 ,5);
+$cate3 = substr($cate, 10 ,5);
 
-$cateArr = array($cate1, $cate2, $cate3);
+// $cateArr = array($cate1, $cate2, $cate3);
 
 $cate_sql = "SELECT name FROM category WHERE code IN ('$cate1', '$cate2', '$cate3')";
 $result = $mysqli->query($cate_sql);
@@ -46,7 +46,19 @@ foreach($cateArr as $c1){
   }
  }
 */
+//추가 이미지 조회
+/* 
+product_image_table에서 pid와 일치하는 행을 모두 조회하고 그 결과를 변수명 $addImages에 배열로 할당
+*/
+$addImages = [];
 
+$addimg_sql = "SELECT filename FROM product_image_table WHERE pid=$pid";
+$addimg_result = $mysqli->query($addimg_sql);
+//$addimg_data = $add_result->fetch_object();
+
+while($addimg_data = $addimg_result->fetch_object()){
+  $addImages[] = $addimg_data;
+}  
 ?>
 
   <div class="container">
@@ -54,7 +66,7 @@ foreach($cateArr as $c1){
     <table class="table">
       <thead>
         <tr>
-          <th scope="col">구분</th>
+          <th scope="col" class="w-25">구분</th>
           <th scope="col">내용</th>
         </tr>
       </thead>
@@ -66,6 +78,32 @@ foreach($cateArr as $c1){
         <tr>
           <th scope="row">썸네일</th>
           <td> <img src="<?= $data->thumbnail; ?>" width="90" alt=""></td>
+        </tr>
+        <tr>
+          <th scope="row">추가 이미지</th>
+          <td>
+            <ul class="d-flex gap-3 list-unstyled">
+              
+              <!-- $addImages의 값을 foreach 반복문으로 li태그로 출력 -->
+              <?php
+                /*
+              while($addimg_data = $addimg_result->fetch_object()){
+                $addImages[] = $addimg_data;
+                */
+              if(isset($addImages)){
+                foreach($addImages as $img){
+              ?>
+              <li class="w-25">
+                <a href="/abcmall/admin/upload/<?= $img->filename ?>">
+                <img src="/abcmall/admin/upload/<?= $img->filename ?>" alt="" class="w-100">
+                </a>
+              </li> 
+              <?php
+                }
+              }
+              ?>
+            </ul>
+          </td>
         </tr>
         <tr>
           <th scope="row">카테고리</th>
@@ -113,7 +151,7 @@ foreach($cateArr as $c1){
     <hr>
     <ul class="d-flex gap-3 justify-content-end list-unstyled">
       <li><button class="btn btn-secondary btn-sm" id="goback">상품 목록</button></li>
-      <li><a href="" class="btn btn-secondary btn-sm">수정</a></li>
+      <li><a href="product_edit.php?pid=<?=$pid?>" class="btn btn-secondary btn-sm">수정</a></li>
       <li><a href="" class="btn btn-danger btn-sm">삭제</a></li>
     </ul>
   </div>
