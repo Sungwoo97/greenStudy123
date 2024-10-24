@@ -1,47 +1,23 @@
 <?php
 session_start();
+
 include_once($_SERVER['DOCUMENT_ROOT'].'/abcmall/admin/inc/dbcon.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/abcmall/admin/inc/file_upload_func.php');
 
-$added_file = $_FILES['savefile'];
+$fileUploadResult = fileUpload($_FILES['savefile']);
 
-
-
-//파일 사이즈 검사
-if($added_file['size'] > 10240000){ 
-  $return_data = array('result'=>'size');   // 연관배열 
-  echo json_encode($return_data); //연관배열 -> 객체 형식
-  exit;
-}
-
-//파일 형식 검사
-if(strpos($added_file['type'],'image') === false){ 
-  $return_data = array('result'=>'image');   // 연관배열 
-  echo json_encode($return_data); //연관배열 -> 객체 형식
-  exit;
-}
-
-//파일 업로드
-$save_dir = $_SERVER['DOCUMENT_ROOT'].'/abcmall/admin/upload/';
-$filename = $added_file['name'];  //insta.jpg
-$ext = pathinfo($filename, PATHINFO_EXTENSION); //파일명에서 확장자만 추출, jpg
-$newFileName = date('YmdHis').substr(rand(),0 ,6); //20241008456213
-$savefile = $newFileName.'.'.$ext;  //20241008456213.jpg
-
-//임시 위치에 있던 파일을 정위치로 이동시켜줌
-if(move_uploaded_file($added_file['tmp_name'], $save_dir.$savefile)){
-  //
-  $sql = "INSERT INTO product_image_table (userid, filename) VALUES ('{$_SESSION['AUID']}', '$savefile')";
+if($fileUploadResult) {
+  $sql = "INSERT INTO product_image_table (userid, filename) VALUES ('{$_SESSION['AUID']}','$fileUploadResult')";
   $result = $mysqli->query($sql);
-  // product 테이블과 연결하기 위해 테이블에 자동 저장되는 고유 번호를 조회
-  $imgid = $mysqli->insert_id; 
-  //조회한 고유번호와 저장한 파일의 이름을 넘겨줌
-  $return_data = array('result'=> '성공', 'imgid'=>$imgid, 'savefile'=>$savefile );   //연관배열
-  echo json_encode($return_data);   //연관배열 -> 객체
+  $imgid = $mysqli->insert_id; //테이블에 자동으로 저장되는 고유번호 조회
+  $return_data = array('result'=>'성공', 'imgid'=>$imgid, 'savefile'=>$fileUploadResult); //연관배열
+  echo json_encode($return_data); //연관배열 -> 객체
   exit;
-}else{
-  $return_data = array('result'=> 'error' );   //연관배열
-  echo json_encode($return_data);   //연관배열 -> 객체
+} else {
+  $return_data = array('result'=>'error'); //연관배열
+  echo json_encode($return_data); //연관배열 -> 객체
   exit;
 }
+
 $mysqli->close();
 ?>
