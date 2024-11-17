@@ -1,12 +1,20 @@
 <script setup>
-import { ref } from 'vue'
+// import { ref, nextTick } from 'vue'
+// const count = ref(0)
 
-// 상태(State)
-const count = ref(0)
+import { reactive, nextTick } from 'vue';
+const state = reactive({count:0})
 
 // 기능(Actions)
-function increment() {
-  count.value++
+async function increment() {
+  state.count++;
+
+   // 아직 DOM 업데이트되지 않음.
+   console.log(document.getElementById('counter').textContent) // 0
+
+    await nextTick()
+    // 이제 DOM 업데이트됨.
+    console.log(document.getElementById('counter').textContent) // 1
 }
 </script>
 
@@ -14,8 +22,8 @@ function increment() {
 
 <template>
   <div class="content">
-    <h1>반응 기초</h1>
-    <div>{{ count }}</div>
+    <h1>상태관리(reactive)</h1>
+    <div id="counter">{{ state.count }}</div>
     <button @click="increment">Add Count</button>
   </div>
 </template>

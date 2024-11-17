@@ -23,7 +23,15 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/tempView.vue'),
+      component: () => import('../views/TempView.vue'),
+    },
+    {
+      path: '/ref',
+      name: 'ref',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/RefView.vue'),
     },
     {
       path: '/reactivity',
@@ -32,6 +40,30 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/ReactivityView.vue'),
+    },
+    {
+      path: '/computed',
+      name: 'computed',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/ComputedView.vue'),
+    },
+    {
+      path: '/binding',
+      name: 'binding',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/BindingView.vue'),
+    },
+    {
+      path: '/condition',
+      name: 'condition',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/ConditionView.vue'),
     },
   ],
 })

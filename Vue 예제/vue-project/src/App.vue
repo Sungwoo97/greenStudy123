@@ -14,7 +14,11 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/template">기초문법</RouterLink>
-        <RouterLink to="/reactivity">Reactivity 기초</RouterLink>
+        <RouterLink to="/ref">상태관리(ref)</RouterLink>
+        <RouterLink to="/reactivity">상태관리(reactive)</RouterLink>
+        <RouterLink to="/computed">계산된 속성</RouterLink>
+        <RouterLink to="/binding">클래스와 스타일 바인딩</RouterLink>
+        <RouterLink to="/condition">조건부 렌더링</RouterLink>
       </nav>
     </div>
   </header>
