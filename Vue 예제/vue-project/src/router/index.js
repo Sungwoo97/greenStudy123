@@ -76,10 +76,27 @@ const router = createRouter({
     {
       path: '/event',
       name: 'event',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/EventView.vue'),
+    },
+    {
+      path: '/form_bind',
+      name: 'form_bind',
+      component: () => import('../views/FormBindView.vue'),
+    },
+    {
+      path: '/life_cycle',
+      name: 'life_cycle',
+      component: () => import('../views/LifeCycleView.vue'),
+    },
+    {
+      path: '/watch',
+      name: 'watch',
+      component: () => import('../views/WatchView.vue'),
+    },
+    {
+      path: '/component',
+      name: 'component',
+      component: () => import('../views/ComponentView.vue'),
     },
   ],
 })

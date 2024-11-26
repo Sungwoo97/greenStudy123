@@ -13,7 +13,9 @@ defineProps({
 </script>
 
 <template>
-  
+  <div class="greetings" v-bind="objectAttr">
+    <h1 class="green">{{ msg }}{{ msg2 }}</h1>    
+  </div>  
 </template>
 
 <style scoped>
